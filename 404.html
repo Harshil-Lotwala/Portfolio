@@ -1,0 +1,886 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>404 - Light Mode Bugs! | Harshil</title>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Space Grotesk', sans-serif;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            color: #333;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .container {
+            text-align: center;
+            z-index: 10;
+            max-width: 800px;
+            padding: 2rem;
+        }
+
+        .error-code {
+            font-size: clamp(8rem, 15vw, 12rem);
+            font-weight: 700;
+            color: #ff6b6b;
+            line-height: 1;
+            margin-bottom: 1rem;
+            text-shadow: 3px 3px 6px rgba(0,0,0,0.1);
+            animation: glitch 2s infinite;
+        }
+
+        .error-title {
+            font-size: clamp(2rem, 5vw, 3rem);
+            font-weight: 600;
+            color: #2c3e50;
+            margin-bottom: 1.5rem;
+            animation: shake 0.5s ease-in-out infinite alternate;
+        }
+
+        .error-message {
+            font-size: 1.3rem;
+            color: #34495e;
+            margin-bottom: 2rem;
+            line-height: 1.6;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .code-block {
+            background: rgba(44, 62, 80, 0.1);
+            border-radius: 10px;
+            padding: 1.5rem;
+            margin: 2rem 0;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 1rem;
+            text-align: left;
+            border: 2px solid #ff6b6b;
+            animation: pulse 2s infinite;
+        }
+
+        .error-line {
+            color: #e74c3c;
+            margin: 0.5rem 0;
+        }
+
+        .comment {
+            color: #7f8c8d;
+            font-style: italic;
+        }
+
+        .back-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 1rem 2rem;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            font-size: 1.1rem;
+            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+        }
+
+        .back-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4);
+        }
+
+        .dark-mode-safe {
+            margin-top: 2rem;
+            font-size: 0.9rem;
+            color: #7f8c8d;
+            font-style: italic;
+        }
+
+        /* Bug animations */
+        .bug {
+            position: absolute;
+            font-size: 2rem;
+            animation: fly 4s linear infinite;
+            z-index: 5;
+        }
+
+        .bug:nth-child(odd) {
+            color: #e74c3c;
+        }
+
+        .bug:nth-child(even) {
+            color: #f39c12;
+        }
+
+        .bug-1 { animation-duration: 3s; animation-delay: 0s; }
+        .bug-2 { animation-duration: 4s; animation-delay: 0.5s; }
+        .bug-3 { animation-duration: 5s; animation-delay: 1s; }
+        .bug-4 { animation-duration: 3.5s; animation-delay: 1.5s; }
+        .bug-5 { animation-duration: 4.5s; animation-delay: 2s; }
+        .bug-6 { animation-duration: 3.2s; animation-delay: 2.5s; }
+        .bug-7 { animation-duration: 4.8s; animation-delay: 3s; }
+        .bug-8 { animation-duration: 3.8s; animation-delay: 3.5s; }
+
+        @keyframes fly {
+            0% {
+                transform: translateX(-100vw) translateY(50vh) rotate(0deg);
+                opacity: 0;
+            }
+            10% {
+                opacity: 1;
+            }
+            90% {
+                opacity: 1;
+            }
+            100% {
+                transform: translateX(100vw) translateY(-50vh) rotate(360deg);
+                opacity: 0;
+            }
+        }
+
+        @keyframes glitch {
+            0%, 90%, 100% {
+                text-shadow: 3px 3px 6px rgba(0,0,0,0.1);
+            }
+            5%, 85% {
+                text-shadow: -3px 3px 6px rgba(255, 107, 107, 0.5), 3px -3px 6px rgba(0,0,0,0.1);
+            }
+        }
+
+        @keyframes shake {
+            0% { transform: translateX(0px); }
+            25% { transform: translateX(-2px); }
+            50% { transform: translateX(2px); }
+            75% { transform: translateX(-1px); }
+            100% { transform: translateX(1px); }
+        }
+
+        @keyframes pulse {
+            0%, 100% { 
+                border-color: #ff6b6b; 
+                box-shadow: 0 0 5px rgba(255, 107, 107, 0.3);
+            }
+            50% { 
+                border-color: #e74c3c; 
+                box-shadow: 0 0 20px rgba(231, 76, 60, 0.5);
+            }
+        }
+
+        /* Floating particles */
+        .particle {
+            position: absolute;
+            width: 4px;
+            height: 4px;
+            background: #ff6b6b;
+            border-radius: 50%;
+            animation: float 6s infinite ease-in-out;
+        }
+
+        .particle:nth-child(2n) { background: #f39c12; }
+        .particle:nth-child(3n) { background: #e74c3c; }
+
+        @keyframes float {
+            0%, 100% { 
+                transform: translateY(0px) rotate(0deg); 
+                opacity: 0;
+            }
+            50% { 
+                transform: translateY(-100px) rotate(180deg); 
+                opacity: 1;
+            }
+        }
+
+        /* Terminal Interface */
+        .terminal-interface {
+            background: #1e1e1e;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            border: 1px solid #333;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            position: fixed;
+            right: 2rem;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 420px;
+            max-height: 500px;
+            z-index: 100;
+        }
+
+        .terminal-interface:hover {
+            transform: translateY(-50%) translateX(-5px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+        }
+
+        .terminal-header {
+            background: #333;
+            padding: 0.75rem 1rem;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .terminal-buttons {
+            display: flex;
+            gap: 0.5rem;
+        }
+
+        .terminal-buttons div {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+        }
+
+        .btn-close { background: #ff5f57; }
+        .btn-minimize { background: #ffbd2e; }
+        .btn-maximize { background: #28ca42; }
+
+        .terminal-title {
+            color: #ccc;
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+
+        .terminal-body {
+            padding: 1.5rem;
+            background: #1e1e1e;
+            color: #fff;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.95rem;
+            line-height: 1.6;
+            max-height: 400px;
+            overflow-y: auto;
+        }
+
+        /* Custom scrollbar for terminal */
+        .terminal-body::-webkit-scrollbar {
+            width: 6px;
+        }
+
+        .terminal-body::-webkit-scrollbar-track {
+            background: #2a2a2a;
+        }
+
+        .terminal-body::-webkit-scrollbar-thumb {
+            background: #555;
+            border-radius: 3px;
+        }
+
+        .terminal-body::-webkit-scrollbar-thumb:hover {
+            background: #777;
+        }
+
+        .terminal-line {
+            margin: 0.5rem 0;
+            display: flex;
+            align-items: baseline;
+            gap: 0.5rem;
+        }
+
+        .prompt {
+            color: #28ca42;
+            font-weight: 600;
+        }
+
+        .command {
+            color: #fff;
+        }
+
+        .output {
+            color: #ccc;
+            margin-left: 2rem;
+        }
+
+        .error {
+            color: #ff6b6b !important;
+        }
+
+        .success {
+            color: #28ca42 !important;
+        }
+
+        .multiline div {
+            margin: 0.3rem 0;
+            color: #f1fa8c;
+        }
+
+        .typing-cursor::after {
+            content: '|';
+            animation: blink 1s infinite;
+            color: #28ca42;
+        }
+
+        .click-instruction {
+            background: linear-gradient(135deg, #ff6b6b, #f39c12);
+            color: white;
+            padding: 1rem;
+            border-radius: 10px;
+            text-align: center;
+            margin-top: 1rem;
+            font-weight: 600;
+            animation: pulse-glow 2s infinite;
+        }
+
+        @keyframes pulse-glow {
+            0%, 100% {
+                box-shadow: 0 0 10px rgba(255, 107, 107, 0.5);
+                transform: scale(1);
+            }
+            50% {
+                box-shadow: 0 0 20px rgba(255, 107, 107, 0.8);
+                transform: scale(1.02);
+            }
+        }
+
+        @keyframes blink {
+            0%, 50% {
+                opacity: 1;
+            }
+            51%, 100% {
+                opacity: 0;
+            }
+        }
+
+        /* Response Buttons */
+        .response-buttons {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+            justify-content: flex-start;
+            padding-left: 2rem;
+        }
+
+        .response-btn {
+            background: #2a2a2a;
+            color: #fff;
+            border: 1px solid #555;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+            cursor: pointer;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+        }
+
+        .response-btn:hover {
+            background: #444;
+            border-color: #28ca42;
+        }
+
+        .yes-btn:hover {
+            background: #28ca42;
+            color: #000;
+        }
+
+        .no-btn:hover {
+            background: #ff6b6b;
+            color: #fff;
+        }
+
+        .user-input {
+            color: #f1fa8c;
+            font-weight: bold;
+        }
+
+        /* Floating Toggle Button */
+        .floating-toggle {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            z-index: 1000;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .floating-toggle.dark-mode {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+        }
+
+        .floating-toggle:hover {
+            transform: scale(1.1) rotate(-10deg);
+            box-shadow: 0 6px 25px rgba(0, 0, 0, 0.4);
+        }
+
+        /* iPad and Mobile Responsive Styles */
+        @media (max-width: 1024px) {
+            .terminal-interface {
+                position: relative;
+                right: auto;
+                top: auto;
+                transform: none;
+                width: 100%;
+                max-width: 500px;
+                margin: 2rem auto;
+                max-height: 400px;
+            }
+            
+            .terminal-interface:hover {
+                transform: translateY(-2px);
+            }
+            
+            body {
+                overflow-y: auto;
+                overflow-x: hidden;
+            }
+            
+            .container {
+                position: relative;
+                z-index: 10;
+                max-width: 100%;
+                padding: 1.5rem;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .container {
+                padding: 1rem;
+            }
+            
+            .error-message {
+                font-size: 1.1rem;
+            }
+            
+            .code-block {
+                font-size: 0.9rem;
+                padding: 1rem;
+            }
+            
+            .bug {
+                font-size: 1.5rem;
+            }
+
+            .terminal-body {
+                font-size: 0.85rem;
+                padding: 1rem;
+                max-height: 300px;
+            }
+            
+            .terminal-interface {
+                border-radius: 10px;
+                margin: 1.5rem auto;
+            }
+            
+            .response-buttons {
+                gap: 0.5rem;
+                padding-left: 1rem;
+                flex-wrap: wrap;
+            }
+            
+            .response-btn {
+                padding: 0.75rem 1.5rem;
+                font-size: 1rem;
+                min-width: 80px;
+                touch-action: manipulation;
+            }
+            
+            .back-button {
+                font-size: 1rem;
+                padding: 1rem 1.5rem;
+                margin-top: 1rem;
+            }
+            
+            .floating-toggle {
+                bottom: 1rem;
+                right: 1rem;
+                width: 50px;
+                height: 50px;
+                font-size: 1rem;
+            }
+            
+            .error-code {
+                font-size: clamp(6rem, 20vw, 10rem);
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .container {
+                padding: 0.5rem;
+            }
+            
+            .terminal-interface {
+                margin: 1rem auto;
+                border-radius: 8px;
+            }
+            
+            .terminal-body {
+                font-size: 0.8rem;
+                padding: 0.75rem;
+                max-height: 250px;
+            }
+            
+            .terminal-header {
+                padding: 0.5rem 0.75rem;
+            }
+            
+            .terminal-title {
+                font-size: 0.8rem;
+            }
+            
+            .response-buttons {
+                padding-left: 0.5rem;
+                justify-content: center;
+            }
+            
+            .response-btn {
+                padding: 0.875rem 1.25rem;
+                font-size: 0.95rem;
+                flex: 1;
+                max-width: 120px;
+            }
+            
+            .code-block {
+                padding: 0.75rem;
+                font-size: 0.8rem;
+            }
+            
+            .error-message {
+                font-size: 1rem;
+            }
+            
+            .back-button {
+                font-size: 0.95rem;
+                padding: 0.875rem 1.25rem;
+            }
+            
+            .bug {
+                font-size: 1.2rem;
+            }
+            
+            .particle {
+                width: 3px;
+                height: 3px;
+            }
+        }
+        
+        /* Touch device optimizations */
+        @media (hover: none) and (pointer: coarse) {
+            .response-btn:hover {
+                background: #2a2a2a;
+                border-color: #555;
+            }
+            
+            .response-btn:active {
+                background: #444;
+                border-color: #28ca42;
+                transform: scale(0.98);
+            }
+            
+            .yes-btn:active {
+                background: #28ca42;
+                color: #000;
+            }
+            
+            .no-btn:active {
+                background: #ff6b6b;
+                color: #fff;
+            }
+            
+            .terminal-interface:hover {
+                transform: none;
+                box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            }
+            
+            .back-button:hover {
+                transform: none;
+            }
+            
+            .floating-toggle:hover {
+                transform: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Flying Bugs -->
+    <div class="bug bug-1" style="top: 10%;"><i class="fas fa-bug"></i></div>
+    <div class="bug bug-2" style="top: 25%;"><i class="fas fa-spider"></i></div>
+    <div class="bug bug-3" style="top: 40%;"><i class="fas fa-bug"></i></div>
+    <div class="bug bug-4" style="top: 55%;"><i class="fas fa-spider"></i></div>
+    <div class="bug bug-5" style="top: 70%;"><i class="fas fa-bug"></i></div>
+    <div class="bug bug-6" style="top: 85%;"><i class="fas fa-spider"></i></div>
+    <div class="bug bug-7" style="top: 15%;"><i class="fas fa-bug"></i></div>
+    <div class="bug bug-8" style="top: 60%;"><i class="fas fa-spider"></i></div>
+
+    <!-- Floating particles -->
+    <div class="particle" style="left: 10%; animation-delay: 0s;"></div>
+    <div class="particle" style="left: 20%; animation-delay: 1s;"></div>
+    <div class="particle" style="left: 30%; animation-delay: 2s;"></div>
+    <div class="particle" style="left: 40%; animation-delay: 3s;"></div>
+    <div class="particle" style="left: 50%; animation-delay: 4s;"></div>
+    <div class="particle" style="left: 60%; animation-delay: 5s;"></div>
+    <div class="particle" style="left: 70%; animation-delay: 0.5s;"></div>
+    <div class="particle" style="left: 80%; animation-delay: 1.5s;"></div>
+    <div class="particle" style="left: 90%; animation-delay: 2.5s;"></div>
+
+
+    <div class="container">
+        <h1 class="error-code">404</h1>
+        <h2 class="error-title">Told You! Now It Has Caught Bugs!</h2>
+        
+        <p class="error-message">
+            I warned you about light mode! Now look what happened - the bugs have taken over! 
+            Remember what the code said: <strong>"Light attracts bugs!"</strong> 
+            This is exactly why developers prefer dark mode. 
+        </p>
+
+        <div class="code-block">
+            <div class="comment">// Error Report:</div>
+            <div class="error-line">LightModeError: Too many bugs attracted to light!</div>
+            <div class="error-line">at Portfolio.enableLightMode() line 404</div>
+            <div class="error-line">at User.clickSunButton() line 1</div>
+            <div class="comment">// Solution: Go back to the dark side... we have cookies!</div>
+        </div>
+
+        <div class="terminal-interface">
+            <div class="terminal-header">
+                <div class="terminal-buttons">
+                    <div class="btn-close"></div>
+                    <div class="btn-minimize"></div>
+                    <div class="btn-maximize"></div>
+                </div>
+                <div class="terminal-title">Terminal - Emergency Bug Fix Protocol</div>
+            </div>
+            <div class="terminal-body">
+                <div class="terminal-line">
+                    <span class="prompt">system@portfolio:~$</span>
+                    <span class="command">./dark_mode_assistant.sh</span>
+                </div>
+                <div class="terminal-line output">
+                    <span class="success">Starting Dark Mode Assistant v3.14...</span>
+                </div>
+                <div class="terminal-line output">
+                    <span>Hello! I see you're in this buggy light mode.</span>
+                </div>
+                <div id="dialog-container">
+                    <div class="terminal-line">
+                        <span class="output">Would you like to switch to dark mode? (y/n):</span>
+                        <span class="user-input typing-cursor"></span>
+                    </div>
+                </div>
+                <div class="response-buttons">
+                    <button class="response-btn yes-btn" data-response="y">Yes</button>
+                    <button class="response-btn no-btn" data-response="n">No</button>
+                </div>
+            </div>
+        </div>
+
+
+        <p class="dark-mode-safe">
+            Pro tip: Dark mode is not just a preference, it's a bug prevention strategy!
+        </p>
+    </div>
+
+    <script>
+        // Add some dynamic bug spawning
+        function spawnRandomBug() {
+            const bug = document.createElement('div');
+            bug.className = 'bug';
+            bug.style.top = Math.random() * 100 + '%';
+            bug.style.left = '-50px';
+            bug.innerHTML = Math.random() > 0.5 ? '<i class="fas fa-bug"></i>' : '<i class="fas fa-spider"></i>';
+            bug.style.animationDuration = (Math.random() * 2 + 3) + 's';
+            bug.style.fontSize = (Math.random() * 1 + 1.5) + 'rem';
+            bug.style.color = ['#e74c3c', '#f39c12', '#ff6b6b'][Math.floor(Math.random() * 3)];
+            
+            document.body.appendChild(bug);
+            
+            // Remove bug after animation
+            setTimeout(() => {
+                if (bug.parentNode) {
+                    bug.parentNode.removeChild(bug);
+                }
+            }, 5000);
+        }
+
+        // Spawn bugs every 2 seconds
+        setInterval(spawnRandomBug, 2000);
+
+        // Interactive Dark Mode Dialog System
+        let dialogStep = 0;
+        const dialogContainer = document.getElementById('dialog-container');
+        const terminalBody = document.querySelector('.terminal-body');
+        const userInput = document.querySelector('.user-input');
+        const responseButtons = document.querySelectorAll('.response-btn');
+
+        const dialogResponses = {
+            noResponses: [
+                "Oh come on! Dark mode is so much better for your eyes!",
+                "But think about it - no more bugs flying around!",
+                "Dark mode uses less battery and looks professional!",
+                "I promise it's not scary! It's actually quite cozy.",
+                "Light mode is literally attracting all these bugs!",
+                "Please? I'm running out of bug spray here!",
+                "Dark mode has cookies! And fewer bugs!",
+                "Look, I'll make you a deal - just try it once?",
+                "I'm begging you! The bugs are getting worse!",
+                "Fine, but you're missing out on the dark side!"
+            ],
+            yesResponse: "Excellent choice! Launching dark mode now..."
+        };
+
+        function addTerminalLine(text, className = 'output') {
+            const line = document.createElement('div');
+            line.className = 'terminal-line';
+            
+            const span = document.createElement('span');
+            span.className = className;
+            span.textContent = text;
+            line.appendChild(span);
+            
+            dialogContainer.appendChild(line);
+            
+            // Auto-scroll to bottom
+            terminalBody.scrollTop = terminalBody.scrollHeight;
+        }
+
+        function handleResponse(response) {
+            // Show user's response
+            userInput.textContent = response;
+            userInput.classList.remove('typing-cursor');
+            
+            // Hide buttons temporarily
+            document.querySelector('.response-buttons').style.display = 'none';
+            
+            setTimeout(() => {
+                if (response === 'y') {
+                    // User said yes - proceed to dark mode!
+                    addTerminalLine(dialogResponses.yesResponse, 'success');
+                    addTerminalLine('Activating anti-bug protocols...', 'success');
+                    addTerminalLine('Redirecting to dark mode...', 'success');
+                    
+                    setTimeout(() => {
+                        window.location.href = 'index.html';
+                    }, 2000);
+                } else {
+                    // User said no - keep asking!
+                    if (dialogStep < dialogResponses.noResponses.length) {
+                        addTerminalLine(dialogResponses.noResponses[dialogStep]);
+                        dialogStep++;
+                        
+                        // Ask again
+                        setTimeout(() => {
+                            askAgain();
+                        }, 1500);
+                    } else {
+                        // Final attempt
+                        addTerminalLine("Alright, I give up! But don't blame me for the bugs!", 'error');
+                        setTimeout(() => {
+                            window.location.href = 'index.html';
+                        }, 2000);
+                    }
+                }
+            }, 1000);
+        }
+
+        function askAgain() {
+            const line = document.createElement('div');
+            line.className = 'terminal-line';
+            
+            const questionSpan = document.createElement('span');
+            questionSpan.className = 'output';
+            questionSpan.textContent = 'How about now? Switch to dark mode? (y/n): ';
+            
+            const inputSpan = document.createElement('span');
+            inputSpan.className = 'user-input typing-cursor';
+            
+            line.appendChild(questionSpan);
+            line.appendChild(inputSpan);
+            
+            dialogContainer.appendChild(line);
+            
+            // Show buttons again
+            document.querySelector('.response-buttons').style.display = 'flex';
+            
+            // Auto-scroll to bottom
+            terminalBody.scrollTop = terminalBody.scrollHeight;
+        }
+
+        // Add click handlers to response buttons
+        responseButtons.forEach(button => {
+            button.addEventListener('click', (e) => {
+                const response = e.target.dataset.response;
+                handleResponse(response);
+            });
+            
+            // Add touch event handlers for better mobile interaction
+            button.addEventListener('touchstart', (e) => {
+                e.preventDefault();
+                button.style.transform = 'scale(0.95)';
+            });
+            
+            button.addEventListener('touchend', (e) => {
+                e.preventDefault();
+                button.style.transform = 'scale(1)';
+                const response = e.target.dataset.response;
+                handleResponse(response);
+            });
+        });
+
+        // Remove the old click handler for the terminal interface
+        const terminalInterface = document.querySelector('.terminal-interface');
+        terminalInterface.style.cursor = 'default';
+        
+        // Smooth scrolling for mobile devices
+        function smoothScrollToBottom() {
+            terminalBody.scrollTo({
+                top: terminalBody.scrollHeight,
+                behavior: 'smooth'
+            });
+        }
+        
+        // Replace direct scroll assignments with smooth scroll
+        const originalAddTerminalLine = addTerminalLine;
+        addTerminalLine = function(text, className = 'output') {
+            originalAddTerminalLine(text, className);
+            setTimeout(smoothScrollToBottom, 100);
+        };
+        
+        // Prevent zoom on double tap for iOS
+        document.addEventListener('touchstart', function(e) {
+            if (e.touches.length > 1) {
+                e.preventDefault();
+            }
+        });
+        
+        let lastTouchEnd = 0;
+        document.addEventListener('touchend', function(e) {
+            const now = (new Date()).getTime();
+            if (now - lastTouchEnd <= 300) {
+                e.preventDefault();
+            }
+            lastTouchEnd = now;
+        }, false);
+        
+        // Optimize animations for mobile performance
+        if (window.matchMedia('(max-width: 768px)').matches) {
+            // Reduce bug spawn rate on mobile
+            clearInterval(window.bugSpawnInterval);
+            window.bugSpawnInterval = setInterval(spawnRandomBug, 4000);
+        }
+    </script>
+</body>
+</html>

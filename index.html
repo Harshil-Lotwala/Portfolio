@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Harshil • Portfolio</title>
+    <meta name="description" content="Harshil's creative portfolio - Developer, Designer, Problem Solver">
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Main Styles -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Cursor -->
+    <div class="cursor"></div>
+    <div class="cursor-follower"></div>
+
+    <!-- Hamburger Button -->
+    <div class="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-brand">
+            <a href="#home" class="brand-text">Harshil</a>
+        </div>
+        <ul class="nav-menu">
+            <li><a href="#home" class="nav-link active">Home</a></li>
+            <li><a href="#about" class="nav-link">About</a></li>
+            <li><a href="#education" class="nav-link">Education</a></li>
+            <li><a href="#work" class="nav-link">Projects</a></li>
+            <li><a href="#projects" class="nav-link">Innovations</a></li>
+            <li><a href="#contact" class="nav-link">Contact</a></li>
+            <li><a href="Resume_2025.pdf" class="nav-link" target="_blank">Resume</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <div class="hero-text">
+                <div class="greeting">
+                    <span class="wave">👋</span>
+                    <span>Hey there, I'm</span>
+                </div>
+                <h1 class="hero-name">
+                    <span class="letter">H</span>
+                    <span class="letter">a</span>
+                    <span class="letter">r</span>
+                    <span class="letter">s</span>
+                    <span class="letter">h</span>
+                    <span class="letter">i</span>
+                    <span class="letter">l</span>
+                </h1>
+                <div class="hero-subtitle">
+                    <span class="subtitle-text">I'm a </span>
+                    <span class="typing-text" id="typing-text"></span>
+                    <span class="cursor-blink">|</span>
+                </div>
+                <p class="hero-description">
+                    Crafting digital experiences through code and creativity. 
+                    I transform ideas into elegant solutions that make a difference.
+                </p>
+                <div class="hero-cta">
+                    <a href="#projects" class="btn btn-primary">
+                        <span>View My Work</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                    <a href="#contact" class="btn btn-outline">
+                        <span>Let's Connect</span>
+                        <i class="fas fa-paper-plane"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="code-animation">
+                    <div class="code-line">
+                        <span class="code-keyword">function</span> <span class="code-method">debugDatabase</span><span class="code-bracket">(</span><span class="code-bracket">)</span> <span class="code-bracket">{</span>
+                    </div>
+                    <div class="code-line">
+                        &nbsp;&nbsp;<span class="code-keyword">const</span> <span class="code-variable">database</span> <span class="code-operator">=</span> <span class="code-bracket">[</span>
+                    </div>
+                    <div class="code-line">
+                        &nbsp;&nbsp;&nbsp;&nbsp;<span class="code-string">"Why do programmers prefer dark mode?"</span><span class="code-operator">,</span>
+                    </div>
+                    <div class="code-line">
+                        &nbsp;&nbsp;&nbsp;&nbsp;<span class="code-string">"Because light attracts bugs!"</span>
+                    </div>
+                    <div class="code-line">
+                        &nbsp;&nbsp;<span class="code-bracket">]</span><span class="code-semicolon">;</span>
+                    </div>
+                    <div class="code-line">
+                        &nbsp;&nbsp;<span class="code-keyword">return</span> <span class="code-variable">database</span><span class="code-dot">.</span><span class="code-method">join</span><span class="code-bracket">(</span><span class="code-string">" "</span><span class="code-bracket">)</span><span class="code-semicolon">;</span>
+                    </div>
+                    <div class="code-line">
+                        <span class="code-bracket">}</span>
+                    </div>
+                </div>
+                <div class="floating-elements">
+                    <div class="float-item item-1"><i class="fab fa-js-square"></i></div>
+                    <div class="float-item item-2"><i class="fas fa-database"></i></div>
+                    <div class="float-item item-3"><i class="fab fa-react"></i></div>
+                    <div class="float-item item-4"><i class="fab fa-python"></i></div>
+                    <div class="float-item item-5"><i class="fab fa-node-js"></i></div>
+                    <div class="float-item item-6"><i class="fab fa-git-alt"></i></div>
+                    <div class="float-item item-7"><i class="fab fa-html5"></i></div>
+                    <div class="float-item item-8"><i class="fab fa-css3-alt"></i></div>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <div class="scroll-text">Scroll Down</div>
+            <div class="scroll-arrow">
+                <i class="fas fa-chevron-down"></i>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-number">01</span>
+                <h2 class="section-title">About Me</h2>
+                <p class="section-subtitle">Get to know me better</p>
+            </div>
+            
+            <div class="about-content">
+                <div class="about-text">
+                    <p class="about-intro">
+                        Welcome to my digital space! I'm Harshil, a passionate developer who believes 
+                        in the power of clean code and beautiful design.
+                    </p>
+                    <p class="about-intro">
+                        With a keen eye for detail and a love for problem-solving, I create web experiences 
+                        that not only look great but perform exceptionally. I'm always exploring new 
+                        technologies and pushing the boundaries of what's possible on the web.
+                    </p>
+                    <p class="about-intro">
+                        When I'm not coding, you'll find me as a car enthusiast exploring automotive culture, 
+                        gaming with friends, or contributing to open source projects in the ever-evolving world of technology.
+                    </p>
+                    
+                    <div class="birthday-code">
+                        <span class="code-comment"># Born to code</span><br>
+                        <span class="code-keyword">from</span> <span class="code-variable">datetime</span> <span class="code-keyword">import</span> <span class="code-variable">date</span><br>
+                        <span class="code-variable">birth_date</span> <span class="code-operator">=</span> <span class="code-method">date</span>(<span class="code-string">2004</span>, <span class="code-string">3</span>, <span class="code-string">30</span>)
+                    </div>
+                </div>
+                
+                <div class="skills-grid">
+                    <div class="skill-category">
+                        <h3>Full-Stack Development</h3>
+                        <div class="skills-list">
+                            <span class="skill">React</span>
+                            <span class="skill">Python (Flask)</span>
+                            <span class="skill">Node.js</span>
+                            <span class="skill">MySQL</span>
+                            <span class="skill">HTML5</span>
+                            <span class="skill">Bootstrap CSS</span>
+                            <span class="skill">JavaScript</span>
+                            <span class="skill">CSS3</span>
+                        </div>
+                    </div>
+                    
+                    <div class="skill-category">
+                        <h3>Version Control & Deployment</h3>
+                        <div class="skills-list">
+                            <span class="skill">Git</span>
+                            <span class="skill">CI/CD</span>
+                            <span class="skill">FileZilla</span>
+                            <span class="skill">CORS Security</span>
+                        </div>
+                    </div>
+                    
+                    <div class="skill-category">
+                        <h3>Data Management & Analysis</h3>
+                        <div class="skills-list">
+                            <span class="skill">Database Design</span>
+                            <span class="skill">Query Optimization</span>
+                            <span class="skill">Microsoft Excel</span>
+                            <span class="skill">Microsoft Word</span>
+                            <span class="skill">PowerPoint</span>
+                        </div>
+                    </div>
+                    
+                    <div class="skill-category">
+                        <h3>Network Security</h3>
+                        <div class="skills-list">
+                            <span class="skill">Wireshark</span>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="education">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-number">02</span>
+                <h2 class="section-title">Education</h2>
+                <p class="section-subtitle">My academic journey</p>
+            </div>
+            
+            <div class="education-content">
+                <div class="education-item">
+                    <div class="education-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <div class="education-details">
+                        <h3 class="education-degree">Bachelor of Science</h3>
+                        <div class="education-major">Applied Computer Science</div>
+                        <div class="education-school">Dalhousie University, Halifax, NS, Canada</div>
+                        <div class="education-period">Expected Graduation: 2027</div>
+                    </div>
+                </div>
+                
+                <div class="education-item">
+                    <div class="education-icon">
+                        <i class="fas fa-school"></i>
+                    </div>
+                    <div class="education-details">
+                        <h3 class="education-degree">Class 12</h3>
+                        <div class="education-major">Science Stream</div>
+                        <div class="education-school">Radiant English Academy, Surat, Gujarat, India</div>
+                        <div class="education-period">Completed: 2022 <span class="education-grade-inline">87%</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Experience -->
+    <section id="work" class="work">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-number">03</span>
+                <h2 class="section-title">Project Experience</h2>
+                <p class="section-subtitle">Key projects I've worked on</p>
+            </div>
+            
+            <div class="work-timeline">
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="work-period">May 2025 - August 2025</div>
+                        <h3 class="work-title"><a href="https://github.com/Harshil-Lotwala/Design-Your-Degree" target="_blank" style="color: inherit; text-decoration: none;">Degree Planner</a></h3>
+                        <div class="work-company">Senior Developer</div>
+                        <p class="work-description">
+                            Web application enabling students to plan degree pathways semester-by-semester. 
+                            Built React frontend with Python Flask backend and MySQL database.
+                        </p>
+                        <div class="work-skills">
+                            <span>React</span>
+                            <span>Python Flask</span>
+                            <span>MySQL</span>
+                            <span>Git</span>
+                        </div>
+                        <div class="work-location">Dalhousie University</div>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="work-period">May 2024 - August 2024</div>
+                        <h3 class="work-title"><a href="https://github.com/Harshil-Lotwala/GPGC" target="_blank" style="color: inherit; text-decoration: none;">Geriatric Psychotropic Green Card</a></h3>
+                        <div class="work-company">Junior Developer</div>
+                        <p class="work-description">
+                            Drug reference card application bringing together practice guidelines and medication data. 
+                            Built with React frontend and Node.js backend.
+                        </p>
+                        <div class="work-skills">
+                            <span>React</span>
+                            <span>Node.js</span>
+                            <span>MySQL</span>
+                            <span>Git</span>
+                        </div>
+                        <div class="work-location">Dalhousie University</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-number">04</span>
+                <h2 class="section-title">Innovations</h2>
+                <p class="section-subtitle">Some things I've built</p>
+            </div>
+            
+            <div class="projects-grid">
+                <div class="project-card" data-project="1">
+                    <div class="project-image">
+                        <div class="project-placeholder">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <div class="project-overlay">
+                            <a href="https://github.com/Harshil-Lotwala/stock-dashboard" target="_blank" class="project-link">
+                                <i class="fas fa-external-link-alt"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-category">Financial Dashboard</div>
+                        <h3 class="project-title">Stock Market Dashboard</h3>
+                        <p class="project-description">
+                            Modern responsive dashboard with real-time stock data, 
+                            TradingView charts, weather integration, and market analysis tools.
+                        </p>
+                        <div class="project-tech">
+                            <span>JavaScript</span>
+                            <span>HTML5</span>
+                            <span>CSS3</span>
+                            <span>APIs</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="project-card" data-project="2">
+                    <div class="project-image">
+                        <div class="project-placeholder">
+                            <i class="fas fa-plus-circle"></i>
+                        </div>
+                        <div class="project-overlay">
+                            <a href="https://github.com/Harshil-Lotwala" target="_blank" class="project-link">
+                                <i class="fas fa-external-link-alt"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-category">GitHub Profile</div>
+                        <h3 class="project-title">Upcoming Innovations</h3>
+                        <p class="project-description">
+                            Exciting new projects and innovative solutions are in development. 
+                            Stay tuned for cutting-edge applications and creative breakthroughs.
+                        </p>
+                        <div class="project-tech">
+                            <span>React</span>
+                            <span>Python</span>
+                            <span>Node.js</span>
+                            <span>More</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-number">05</span>
+                <h2 class="section-title">Let's Work Together</h2>
+                <p class="section-subtitle">Ready to bring your ideas to life</p>
+            </div>
+            
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>Get In Touch</h3>
+                    <p>
+                        I'm always interested in hearing about new opportunities 
+                        and exciting projects. Whether you have a question or just 
+                        want to say hello, feel free to reach out!
+                    </p>
+                    
+                    <div class="contact-links">
+                        <a href="mailto:hashilv3034@gmail.com" class="contact-link">
+                            <i class="fas fa-envelope"></i>
+                            <span>hashilv3034@gmail.com</span>
+                        </a>
+                        <a href="https://www.linkedin.com/in/harshil-lotwala" class="contact-link">
+                            <i class="fab fa-linkedin"></i>
+                            <span>LinkedIn</span>
+                        </a>
+                        <a href="https://github.com/Harshil-Lotwala" class="contact-link">
+                            <i class="fab fa-github"></i>
+                            <span>GitHub</span>
+                        </a>
+                    </div>
+                </div>
+                
+                <form class="contact-form" action="https://formspree.io/f/manbgkop" method="POST">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="subject">Subject</label>
+                        <input type="text" id="subject" name="subject" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="5" required></textarea>
+                    </div>
+                    
+                    <button type="submit" class="btn btn-primary">
+                        <span>Send Message</span>
+                        <i class="fas fa-paper-plane"></i>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p>&copy; 2024 Harshil</p>
+                <div class="social-links">
+                    <a href="https://github.com/Harshil-Lotwala"><i class="fab fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/harshil-lotwala"><i class="fab fa-linkedin"></i></a>
+                    <a href="tel:+16478974634"><i class="fas fa-phone"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating Light Mode Toggle -->
+    <button class="floating-toggle light-mode" id="lightModeToggle" title="Switch to Light Mode (Warning!)">
+        <i class="fas fa-sun"></i>
+    </button>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+</body>
+</html>
