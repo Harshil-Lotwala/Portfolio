@@ -1,6 +1,19 @@
 # Personal Portfolio Website
 
+ **[LIVE PORTFOLIO](https://harshil-lotwala-portfolio.netlify.app)** 
+
 A modern, responsive portfolio website built with HTML5, CSS3, and JavaScript featuring interactive animations, custom cursor effects, and dynamic content presentation.
+
+## 🌐 Live Deployment
+
+**Live Site**: [https://harshil-lotwala-portfolio.netlify.app](https://harshil-lotwala-portfolio.netlify.app)
+
+-  **Hosted on Netlify** with automatic deployments
+-  **Responsive Design** for all device sizes
+-  **Interactive Animations** and custom cursor effects
+-  **Dynamic Content** with typing animations
+-  **Contact Form Integration** with Formspree
+-  **Modern UI/UX** with glassmorphism and smooth scrolling
 
 ## Features
 
