@@ -14,6 +14,7 @@ document.addEventListener('DOMContentLoaded', function() {
     initProjectCards();
     initContactForm();
     initLightModeToggle();
+    initTapEasterEgg();
 });
 
 // ===== CUSTOM CURSOR =====
@@ -413,6 +414,30 @@ function preloadResources() {
 }
 
 // ===== EASTER EGGS =====
+
+// ===== TAP-BASED EASTER EGG =====
+function initTapEasterEgg() {
+    const target = document.querySelector('.hero-name');
+    let tapCount = 0;
+    let tapTimer;
+
+    if (!target) return;
+
+    target.addEventListener('click', () => {
+        tapCount++;
+
+        clearTimeout(tapTimer);
+
+        tapTimer = setTimeout(() => {
+            tapCount = 0;
+        }, 1500);
+
+        if (tapCount === 5) {
+            triggerEasterEgg();
+            tapCount = 0;
+        }
+    });
+}
 
 // Konami code easter egg
 let konamiCode = [];
