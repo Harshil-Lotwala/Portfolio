@@ -1,163 +1,123 @@
-# Personal Portfolio Website
+# Harshil Lotwala — Portfolio
 
- **[LIVE PORTFOLIO](https://harshil-lotwala-portfolio.netlify.app)** 
+[View the live portfolio](https://harshil-lotwala-portfolio.netlify.app)
 
-A modern, responsive portfolio website built with HTML5, CSS3, and JavaScript featuring interactive animations, custom cursor effects, and dynamic content presentation.
+A responsive, editorial-style portfolio for Harshil Lotwala, a product-minded developer and designer studying Applied Computer Science at Dalhousie University.
 
-## 🌐 Live Deployment
+The site presents selected web and mobile projects, professional experience, technical skills, education, and contact information in a single accessible page.
 
-**Live Site**: [https://harshil-lotwala-portfolio.netlify.app](https://harshil-lotwala-portfolio.netlify.app)
+## Highlights
 
--  **Hosted on Netlify** with automatic deployments
--  **Responsive Design** for all device sizes
--  **Interactive Animations** and custom cursor effects
--  **Dynamic Content** with typing animations
--  **Contact Form Integration** with Formspree
--  **Modern UI/UX** with glassmorphism and smooth scrolling
+- Responsive layouts for small phones, tablets, laptops, desktops, and ultra-wide displays
+- Full-screen mobile navigation with keyboard and orientation support
+- Six résumé-based project case studies with GitHub and live-demo links where available
+- Scroll-triggered content reveals using `IntersectionObserver`
+- Continuously rotating specialty strip with eight unique disciplines
+- Accessible focus states, semantic landmarks, reduced-motion support, and a skip link
+- Formspree contact form with inline success and error feedback
+- Custom portfolio favicon and official Dalhousie University logo asset
+- No framework or build step required
 
-## Features
+## Portfolio Sections
 
-- **Responsive Design**: Mobile-first approach with breakpoints for all device sizes
-- **Dynamic Typing Animation**: Animated text that cycles through different roles with realistic typing variations
-- **Custom Mouse Cursor**: Interactive cursor with trailing effects and hover animations
-- **Smooth Scrolling**: Navigation with smooth scroll behavior and active section highlighting
-- **Contact Form Integration**: Formspree-powered contact form with validation and submission feedback
-- **Interactive Animations**: Scroll-triggered animations, floating tech icons, and hover effects
-- **Modern UI/UX**: Gradient backgrounds, glassmorphism effects, and professional styling
-- **Project Showcase**: Timeline layout displaying development projects with GitHub integration
+1. **Introduction** — positioning, location, availability, and primary actions
+2. **Selected Work** — Degree Planner, AI Flashcard Generator, GPGC, FocusTrail, Stock Dashboard, and Job Marketplace
+3. **About & Experience** — background and freelance product-design work for SCITCO
+4. **Toolkit** — languages, frameworks, databases, product tools, APIs, and engineering practices
+5. **Education** — B.Sc. Applied Computer Science, Sexton Scholar recognition, and certificates at Dalhousie University
+6. **Contact** — email, social links, phone, and contact form
 
-## Technologies Used
+## Technology
 
-- **Frontend**: HTML5, CSS3, JavaScript (ES6+)
-- **Styling**: CSS Grid, Flexbox, Custom Properties, Keyframe Animations
-- **Form Handling**: Formspree API
-- **Icons**: Font Awesome
-- **Fonts**: Google Fonts (Space Grotesk, JetBrains Mono)
-- **Version Control**: Git
+- Semantic HTML5
+- Modern CSS with Grid, Flexbox, custom properties, fluid type, and responsive breakpoints
+- Vanilla JavaScript
+- Google Fonts: Manrope and DM Mono
+- Formspree for contact-form delivery
+- Netlify for hosting
 
-## Key Sections
+## Responsive Design
 
-### Hero Section
-- Animated name with letter floating effects
-- Dynamic typing animation cycling through roles
-- Interactive floating tech icons
-- Call-to-action buttons with hover effects
+The layout is designed for the full device range rather than a desktop/mobile split:
 
-### About Section
-- Personal introduction and background
-- Technical skills organized by category
-- Professional experience summary
+- Extra-small phones: up to 430px
+- Phones and small tablets: up to 680px
+- Tablets and compact laptops: up to 900px
+- Medium laptops: up to 1180px
+- Standard desktop layouts
+- Large and ultra-wide displays: 1920px and above
+- Short landscape screens receive a dedicated navigation and hero treatment
 
-### Education Section
-- Academic background and qualifications
-- University and high school education details
-- Responsive card layout with educational icons
+Content width is capped on very large screens so typography and project layouts remain readable instead of stretching across the display.
 
-### Project Experience
-- Timeline layout with project details
-- GitHub repository links
-- Technology stack information
-- Project descriptions and achievements
+## Project Structure
 
-### Featured Projects
-- Project showcase with hover effects
-- External links to repositories and demos
-- Technology tags and descriptions
+```text
+.
+├── index.html              Main portfolio content
+├── styles.css              Visual system and responsive layouts
+├── script.js               Navigation, reveals, marquee, and form behavior
+├── Resume_Harshil.pdf      Primary résumé linked by the website
+├── dalhousie-logo.svg      Official Dalhousie logo used in Education
+├── favicon.svg             Portfolio browser icon
+├── netlify.toml            Netlify configuration
+└── README.md               Project documentation
+```
 
-### Contact Section
-- Interactive contact form with validation
-- Social media and professional links
-- Real-time form submission feedback
+Additional résumé versions and legacy image/style assets remain in the repository but are not used by the current website.
 
-## Installation and Setup
+## Run Locally
 
-1. Clone the repository:
+The portfolio is static, so it can be opened directly through `index.html`. Running a local server is recommended so browser behavior matches deployment:
+
 ```bash
-git clone https://github.com/Harshil-Lotwala/Portfolio.git
+python3 -m http.server 8000
 ```
 
-2. Navigate to the project directory:
-```bash
-cd Portfolio
+Then open [http://localhost:8000](http://localhost:8000).
+
+## Updating Content
+
+- Personal details, project descriptions, and links: `index.html`
+- Colors, typography, spacing, and breakpoints: `styles.css`
+- Navigation, animations, marquee, and form handling: `script.js`
+- Primary résumé: `Resume_Harshil.pdf`
+- Browser icon: `favicon.svg`
+
+The main design tokens are declared at the top of `styles.css`:
+
+```css
+:root {
+  --paper: #f3f0e8;
+  --ink: #151515;
+  --acid: #d9ff43;
+  --blue: #5568ff;
+}
 ```
 
-3. Open `index.html` in your web browser or serve with a local development server:
-```bash
-# Using Python
-python -m http.server 8000
+## Contact Form
 
-# Using Node.js
-npx serve .
-
-# Or simply open index.html in your browser
-```
-
-## Customization
-
-### Updating Personal Information
-- Edit content in `index.html` for personal details, projects, and contact information
-- Replace `Resume_2025.pdf` with your own resume file
-- Update social media links and contact information
-
-### Modifying Animations
-- Typing animation words can be changed in `script.js`:
-```javascript
-let typingWords = ['Developer', 'Designer', 'Gamer', 'Creator', 'Problem Solver', 'Tech Enthusiast'];
-```
-
-- Animation timing and effects can be adjusted in the CSS file
-- Custom cursor behavior can be modified in the cursor initialization function
-
-### Styling Changes
-- Color scheme is defined using CSS custom properties in `:root`
-- Responsive breakpoints can be adjusted in the media queries
-- Typography and spacing can be modified through CSS variables
-
-## Browser Compatibility
-
-- Chrome (latest)
-- Firefox (latest)
-- Safari (latest)
-- Edge (latest)
-
-## Performance Features
-
-- Optimized CSS and JavaScript for fast loading
-- Throttled scroll events for smooth performance
-- Lazy-loaded animations triggered by intersection observer
-- Efficient DOM manipulation and event handling
-
-## Contact Form Setup
-
-The contact form uses Formspree for handling submissions. The form is already configured with the endpoint:
+The contact form submits to Formspree. To use another Formspree account, replace the endpoint in `index.html`:
 
 ```html
-<form action="https://formspree.io/f/manbgkop" method="POST">
+<form action="https://formspree.io/f/your-form-id" method="POST">
 ```
 
-To set up your own form:
-1. Sign up at [Formspree.io](https://formspree.io)
-2. Create a new form and get your endpoint URL
-3. Replace the form action in `index.html` with your form ID
+## Deployment
 
-## Contributing
-
-This is a personal portfolio project, but feedback and suggestions are welcome. Feel free to open an issue or submit a pull request.
-
-## License
-
-This project is open source and available under the [MIT License](LICENSE).
+The repository is configured for Netlify. Deploy the repository root as a static site; no build command or output directory is required.
 
 ## Author
 
 **Harshil Lotwala**
-- GitHub: [@Harshil-Lotwala](https://github.com/Harshil-Lotwala)
-- LinkedIn: [Harshil Lotwala](https://www.linkedin.com/in/harshil-lotwala)
-- Email: hashilv3034@gmail.com
 
-## Acknowledgments
+- [GitHub](https://github.com/Harshil-Lotwala)
+- [LinkedIn](https://www.linkedin.com/in/harshil-lotwala)
+- [Portfolio](https://harshil-lotwala-portfolio.netlify.app)
+- Email: [harshil.lotwala@dal.ca](mailto:harshil.lotwala@dal.ca)
 
-- Font Awesome for icons
-- Google Fonts for typography
-- Formspree for contact form handling
-- Inspiration from modern web design trends and best practices
+## Credits
+
+- Dalhousie University logo sourced from the university’s official website
+- Manrope and DM Mono provided through Google Fonts
+- Contact-form delivery provided by Formspree
