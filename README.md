@@ -1,6 +1,6 @@
 # Harshil Lotwala — Portfolio
 
-[View the live portfolio](https://harshil-lotwala-portfolio.netlify.app)
+[View on Netlify](https://harshil-lotwala-portfolio.netlify.app) · [View on GitHub Pages](https://harshil-lotwala.github.io/Portfolio/)
 
 A responsive, editorial-style portfolio for Harshil Lotwala, a product-minded developer and designer studying Applied Computer Science at Dalhousie University.
 
@@ -10,7 +10,7 @@ The site presents selected web and mobile projects, professional experience, tec
 
 - Responsive layouts for small phones, tablets, laptops, desktops, and ultra-wide displays
 - Full-screen mobile navigation with keyboard and orientation support
-- Six résumé-based project case studies with GitHub and live-demo links where available
+- Seven project case studies with GitHub and live-demo links where available
 - Scroll-triggered content reveals using `IntersectionObserver`
 - Continuously rotating specialty strip with eight unique disciplines
 - Accessible focus states, semantic landmarks, reduced-motion support, and a skip link
@@ -21,7 +21,7 @@ The site presents selected web and mobile projects, professional experience, tec
 ## Portfolio Sections
 
 1. **Introduction** — positioning, location, availability, and primary actions
-2. **Selected Work** — Degree Planner, AI Flashcard Generator, GPGC, FocusTrail, Stock Dashboard, and Job Marketplace
+2. **Selected Work** — Cricket Perfect Run, Degree Planner, AI Flashcard Generator, GPGC, FocusTrail, Stock Dashboard, and Job Marketplace
 3. **About & Experience** — background and freelance product-design work for SCITCO
 4. **Toolkit** — languages, frameworks, databases, product tools, APIs, and engineering practices
 5. **Education** — B.Sc. Applied Computer Science, Sexton Scholar recognition, and certificates at Dalhousie University
@@ -105,7 +105,12 @@ The contact form submits to Formspree. To use another Formspree account, replace
 
 ## Deployment
 
-The repository is configured for Netlify. Deploy the repository root as a static site; no build command or output directory is required.
+The repository supports two static hosts:
+
+- **Netlify** publishes the repository root with no build command.
+- **GitHub Pages** deploys through `.github/workflows/deploy-pages.yml` after each push to `main`.
+
+The GitHub Pages deployment is available at [harshil-lotwala.github.io/Portfolio](https://harshil-lotwala.github.io/Portfolio/).
 
 ## Author
 
