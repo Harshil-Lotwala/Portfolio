@@ -10,7 +10,7 @@ The site presents selected web and mobile projects, professional experience, tec
 
 - Responsive layouts for small phones, tablets, laptops, desktops, and ultra-wide displays
 - Full-screen mobile navigation with keyboard and orientation support
-- Seven project case studies with GitHub and live-demo links where available
+- Eight project case studies with GitHub and live-demo links where available
 - Scroll-triggered content reveals using `IntersectionObserver`
 - Continuously rotating specialty strip with eight unique disciplines
 - Accessible focus states, semantic landmarks, reduced-motion support, and a skip link
@@ -21,7 +21,7 @@ The site presents selected web and mobile projects, professional experience, tec
 ## Portfolio Sections
 
 1. **Introduction** — positioning, location, availability, and primary actions
-2. **Selected Work** — Cricket Perfect Run, Degree Planner, AI Flashcard Generator, GPGC, FocusTrail, Stock Dashboard, and Job Marketplace
+2. **Selected Work** — Cricket Perfect Run, Vaibhavi’s Kitchen, Degree Planner, AI Flashcard Generator, GPGC, FocusTrail, Stock Dashboard, and Job Marketplace
 3. **About & Experience** — background and freelance product-design work for SCITCO
 4. **Toolkit** — languages, frameworks, databases, product tools, APIs, and engineering practices
 5. **Education** — B.Sc. Applied Computer Science, Sexton Scholar recognition, and certificates at Dalhousie University

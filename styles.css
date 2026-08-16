@@ -88,6 +88,12 @@ section[id] { scroll-margin-top: 24px; }
 .cricket-shape::after { content: ""; position: absolute; width: 48px; height: 180px; border: 2px solid var(--ink); border-radius: 24px 24px 8px 8px; background: var(--paper); left: 135px; top: 42px; transform: rotate(-34deg); box-shadow: inset 0 -40px 0 var(--orange); }
 .cricket-shape span { position: absolute; bottom: 38px; width: 10px; height: 105px; background: var(--ink); z-index: 2; }
 .cricket-shape span:nth-child(1) { right: 74px; }.cricket-shape span:nth-child(2) { right: 54px; }.cricket-shape span:nth-child(3) { right: 34px; }
+.kitchen-shape { background: var(--acid); border: 2px solid var(--ink); box-shadow: 14px 14px 0 var(--blue); overflow: hidden; transform: rotate(-2deg); }
+.kitchen-shape::before { content: "V\2019s KITCHEN"; position: absolute; left: 28px; top: 25px; font: 600 14px/1 var(--mono); letter-spacing: .1em; }
+.kitchen-shape::after { content: "PICKUP · SURAT"; position: absolute; right: 24px; bottom: 22px; font: 500 10px/1 var(--mono); letter-spacing: .08em; }
+.kitchen-bowl { position: absolute; left: 50%; top: 55%; width: 170px; height: 82px; border: 3px solid var(--ink); border-radius: 8px 8px 90px 90px; background: var(--paper); transform: translate(-50%,-50%); box-shadow: inset 0 12px 0 var(--blue); }
+.kitchen-steam { position: absolute; top: 66px; width: 28px; height: 70px; border-left: 3px solid var(--ink); border-radius: 50%; transform: rotate(12deg); }
+.kitchen-steam:nth-child(2) { left: 122px; }.kitchen-steam:nth-child(3) { left: 164px; height: 58px; top: 75px; }.kitchen-steam:nth-child(4) { left: 206px; transform: rotate(-12deg); }
 .planner-shape { background: var(--blue); transform: rotate(-3deg); padding: 35px; box-shadow: 16px 16px 0 var(--acid); }
 .planner-shape span { display: block; height: 42px; margin: 11px 0; border: 1px solid white; background: rgba(255,255,255,.13); }
 .cards-shape span { position: absolute; width: 190px; height: 240px; display: grid; place-items: center; font: 500 76px/1 Georgia,serif; border: 2px solid var(--ink); background: var(--orange); box-shadow: 10px 10px 0 var(--ink); }
