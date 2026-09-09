@@ -3,270 +3,248 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Harshil Lotwala is a product-minded developer and designer in Halifax building useful web and mobile experiences.">
-  <meta name="theme-color" content="#f3f0e8">
-  <title>Harshil Lotwala</title>
-  <link rel="icon" type="image/svg+xml" href="favicon.svg?v=4">
+  <meta name="description" content="Harshil Lotwala is a product designer and software developer who turns research, flows, and prototypes into accessible working software.">
+  <meta name="theme-color" content="#f5f2ea">
+  <title>Harshil Lotwala — Designer & Developer</title>
+  <link rel="icon" type="image/svg+xml" href="favicon.svg?v=5">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="styles.css?v=20260909-4">
 </head>
-<body>
+<body id="top">
   <a class="skip-link" href="#main">Skip to content</a>
-  <div class="noise" aria-hidden="true"></div>
 
-  <header class="site-header" id="top">
-    <a class="wordmark" href="#top" aria-label="Harshil Lotwala, home">
-      <span class="wordmark-name">Harshil Lotwala</span>
-    </a>
-    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
-      <span></span><span></span><span></span><span class="sr-only">Toggle navigation</span>
-    </button>
+  <header class="site-header">
+    <a class="wordmark" href="#main" aria-label="Harshil Lotwala, home"><span class="wordmark-dot" aria-hidden="true"></span><span>Harshil Lotwala</span></a>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav"><span></span><span></span><span></span><span class="sr-only">Toggle navigation</span></button>
     <nav id="site-nav" class="site-nav" aria-label="Main navigation">
-      <a href="#work">Work</a>
-      <a href="#about">About</a>
-      <a href="#contact">Contact</a>
+      <a href="#designer-projects">Designer Projects</a><a href="#developer-projects">Developer Projects</a><a href="#about">About</a><a href="#contact">Contact</a>
       <a class="nav-resume" href="Resume_Harshil.pdf" target="_blank" rel="noopener">Résumé ↗</a>
     </nav>
   </header>
 
   <main id="main">
     <section class="hero section-pad" aria-labelledby="hero-title">
-      <div class="hero-kicker reveal">
-        <span class="status-dot"></span>
-        Halifax, NS · Open to opportunities
-      </div>
-      <h1 id="hero-title" class="reveal">
-        I turn complex ideas into <em>useful digital products.</em>
-      </h1>
-      <div class="hero-bottom reveal">
-        <p>Product-minded developer and designer studying Applied Computer Science at Dalhousie University. I build accessible web and mobile experiences from first sketch to working software.</p>
-        <div class="hero-actions">
-          <a class="button button-dark" href="#work">Explore my work <span>↓</span></a>
-          <a class="text-link" href="mailto:harshil.lotwala@dal.ca">Let’s talk <span>↗</span></a>
-        </div>
+      <div class="hero-kicker-row reveal"><p>Product Design · Full-Stack Development</p><p class="hero-status"><span aria-hidden="true"></span>Halifax, NS · Open to opportunities</p></div>
+      <h1 id="hero-title" class="reveal">I turn complex ideas into <em>useful digital products.</em></h1>
+      <div class="hero-bottom">
+        <p class="hero-lead reveal">Product-minded designer and developer studying Applied Computer Science at Dalhousie University. I shape accessible web and mobile experiences from early research and interface decisions to working software.</p>
+        <div class="hero-actions reveal"><a class="button button-dark" href="#designer-projects">Explore my work <span>↓</span></a><a class="text-link" href="#contact">Let’s talk ↗</a></div>
       </div>
     </section>
 
-    <div class="marquee" aria-label="Core disciplines">
-      <div class="marquee-track">
-        <span>Web Development</span>
-        <span>Mobile Apps</span>
-        <span>Product Design</span>
-        <span>UI/UX</span>
-        <span>AI Integration</span>
-        <span>Database Design</span>
-        <span>API Development</span>
-        <span>Agile Delivery</span>
-      </div>
-    </div>
+    <div class="hero-marquee" aria-label="Design and development disciplines"><div class="hero-marquee-track"><span>Product Design</span><span>UI/UX</span><span>Full-Stack Development</span><span>Accessible Interfaces</span><span>Mobile Apps</span><span>Software Engineering</span><span>Product Design</span><span>UI/UX</span><span>Full-Stack Development</span><span>Accessible Interfaces</span><span>Mobile Apps</span><span>Software Engineering</span></div></div>
 
-    <section id="work" class="work section-pad">
-      <div class="section-heading reveal">
-        <p class="eyebrow">01 / Selected work</p>
-        <h2>Built to solve<br>real problems.</h2>
-        <p>A selection of live, client, academic, and personal projects spanning hospitality, simulation, planning, healthcare, learning, finance, and productivity.</p>
-      </div>
+    <section class="practice-split" aria-label="Design and development focus">
+      <a href="#designer-projects"><span>01 / Designer Projects</span><h2>UX research, product thinking, interfaces, and prototypes.</h2><p>Read the coursework case studies and try the interactive device flows.</p><b>Explore Designer Projects ↓</b></a>
+      <a href="#developer-projects"><span>02 / Developer Projects</span><h2>Front-end, mobile, APIs, databases, testing, and delivery.</h2><p>Explore eight software projects across web, mobile, healthcare, finance, and learning.</p><b>Explore Developer Projects ↓</b></a>
+    </section>
 
+    <section id="designer-projects" class="design-work section-pad">
+      <div class="section-heading reveal"><div><p class="eyebrow">01 / UI/UX & product design</p><h2>Designer Projects</h2></div><p>Coursework spanning interaction design, wearable interfaces, mobile commerce, and UX research. The device experiences are interactive, so the work can be explored instead of only viewed as static screens.</p></div>
+
+      <article class="case-study dal-connect-case reveal" id="dal-connect">
+        <div class="case-copy">
+          <div class="case-meta"><span>01</span><span>Multi-device interaction</span><span>Coursework</span></div>
+          <h3>DAL Connect: Phone & Watch</h3>
+          <p class="case-summary">Two connected DAL Connect experiences: clearer confirmation and scheduling on mobile, plus fast networking, calendar, and study-space actions on Apple Watch.</p>
+          <dl class="case-facts"><div><dt>Problem</dt><dd>Students need clear feedback on phone and quick, glanceable actions on watch.</dd></div><div><dt>Phone</dt><dd>Groups, posts, reminders, weekly schedules, forms, and persistent success states.</dd></div><div><dt>Watch</dt><dd>Networking, messaging, calendar, live space availability, time selection, and booking.</dd></div><div><dt>Next step</dt><dd>Add loading and failure states, accessibility labels, cancellation, and backend synchronization.</dd></div></dl>
+        </div>
+        <div class="device-showcase">
+          <div class="device-switch" role="group" aria-label="Choose DAL Connect prototype"><button class="active" type="button" data-device-switch="phone" aria-pressed="true">Phone</button><button type="button" data-device-switch="watch" aria-pressed="false">Watch</button></div>
+          <div class="device-view is-active" data-device-view="phone">
+        <div class="demo-stage" data-demo="dal" aria-label="Interactive DAL Connect phone prototype">
+          <div class="phone-shell"><div class="phone-speaker" aria-hidden="true"></div><div class="phone-screen">
+            <div class="demo-toast" data-dal-toast role="status" aria-live="polite">Success — you joined the group</div>
+            <section class="demo-panel is-active" data-dal-panel="group"><div class="mini-topbar"><button class="mini-icon" data-dal-route="menu" aria-label="Back to prototype menu">‹</button><strong>Group</strong><button class="mini-icon dots-button" data-dal-options aria-expanded="false" aria-label="More options">•••</button></div><div class="group-options" data-dal-options-menu hidden><button data-dal-message="Group link copied">Share group</button><button data-dal-message="Notifications muted">Mute notifications</button><button data-dal-leave>Leave group</button></div><div class="group-avatar">CS</div><h4>CS Study Buddies</h4><p class="mini-muted">134 members · Student community</p><p class="mini-body">Weekly study sessions, shared resources, and a place to connect with other computer science students.</p><button class="mini-primary" data-dal-join>Join Group</button><button class="mini-secondary" data-dal-post hidden>Create a Post</button><div class="mini-section-title"><strong>Recent posts</strong><button data-dal-route="posts">View all</button></div><div class="post-card"><b>Alex Chen</b><small>2h ago</small><p>Anyone up for a study session this weekend?</p></div></section>
+            <section class="demo-panel" data-dal-panel="post"><div class="mini-topbar"><button class="mini-icon" data-dal-back aria-label="Back to group">‹</button><strong>Create post</strong><span></span></div><div class="info-note">Posting is completely optional.</div><label class="mini-label">Share with the group<textarea rows="5" placeholder="Ask a question or share a resource"></textarea></label><button class="mini-primary" data-dal-publish>Publish Post</button></section>
+            <section class="demo-panel" data-dal-panel="reminders"><div class="mini-topbar"><span></span><strong>Reminders</strong><button class="mini-icon" data-dal-route="new-reminder" aria-label="Add reminder">＋</button></div><div class="reminder-card"><span class="pulse-dot"></span><small>Starting soon</small><h4>CSCI 4163 Study Session</h4><p>Killam Library · Room 210</p><button class="location-toggle" data-dal-location aria-expanded="false">⌖ Show location</button><div class="location-detail" data-dal-location-detail hidden>Killam Library<br>Room 210 · 6225 University Ave.</div><div class="timer">00:14:32</div><button class="mini-primary" data-reminder-done>I’m Here</button><button class="mini-secondary" data-reminder-dismiss>Dismiss</button></div></section>
+            <section class="demo-panel" data-dal-panel="schedule"><div class="mini-topbar"><span></span><strong>Weekly Schedule</strong><button class="mini-icon" data-dal-route="new-event" aria-label="Add event">＋</button></div><div class="week-row"><button>Mon<br><span>12</span></button><button class="active">Tue<br><span>13</span></button><button>Wed<br><span>14</span></button><button>Thu<br><span>15</span></button><button>Fri<br><span>16</span></button></div><button class="event-card exam" data-dal-message="HCI critique details opened"><small>10:00 AM</small><h4>HCI critique</h4><p>Goldberg · Room 127</p></button><button class="event-card" data-dal-message="Team check-in details opened"><small>2:30 PM</small><h4>Team check-in</h4><p>Online · 30 minutes</p></button><div data-dal-created-event></div></section>
+            <section class="demo-panel" data-dal-panel="menu"><div class="mini-topbar"><span></span><strong>DAL Connect</strong><span></span></div><h4>Choose a prototype</h4><button class="prototype-card" data-dal-route="group"><b>Group Management</b><span>Join, post, and browse updates</span></button><button class="prototype-card" data-dal-route="reminders"><b>Reminders</b><span>Countdown, location, and actions</span></button><button class="prototype-card" data-dal-route="schedule"><b>Weekly Schedule</b><span>Events, dates, and details</span></button></section>
+            <section class="demo-panel" data-dal-panel="posts"><div class="mini-topbar"><button class="mini-icon" data-dal-route="group" aria-label="Back to group">‹</button><strong>All Posts</strong><span></span></div><div class="post-card"><b>Alex Chen</b><small>2h ago</small><p>Anyone up for a study session this weekend?</p></div><div class="post-card"><b>Sarah Kim</b><small>5h ago</small><p>I added my accessibility notes to the shared drive.</p></div><div class="post-card"><b>Jordan Lee</b><small>1d ago</small><p>Room 211 is free after 4 PM today.</p></div></section>
+            <section class="demo-panel" data-dal-panel="new-reminder"><div class="mini-topbar"><button class="mini-icon" data-dal-route="reminders" aria-label="Back">‹</button><strong>New Reminder</strong><span></span></div><form data-dal-reminder-form><label class="mini-label">Title<input required value="Study session"></label><label class="mini-label">Location<input required value="Killam Library"></label><label class="mini-label">Time<input type="time" required value="14:00"></label><button class="mini-primary" type="submit">Save reminder</button></form></section>
+            <section class="demo-panel" data-dal-panel="new-event"><div class="mini-topbar"><button class="mini-icon" data-dal-route="schedule" aria-label="Back">‹</button><strong>New Event</strong><span></span></div><form data-dal-event-form><label class="mini-label">Event title<input required value="Portfolio review"></label><label class="mini-label">Location<input required value="Mona Campbell"></label><label class="mini-label">Date<input type="date" required value="2026-10-16"></label><button class="mini-primary" type="submit">Add to schedule</button></form></section>
+            <nav class="mini-tabbar" aria-label="Prototype navigation"><button class="active" data-dal-nav="group"><span>⌂</span>Group</button><button data-dal-nav="schedule"><span>□</span>Schedule</button><button data-dal-nav="reminders"><span>◷</span>Reminders</button></nav>
+          </div></div>
+        </div>
+          </div>
+          <div class="device-view" data-device-view="watch">
+        <div class="demo-stage demo-green" data-demo="watch" aria-label="Interactive DAL Connect Apple Watch prototype">
+          <div class="watch-wrap"><div class="watch-strap top" aria-hidden="true"></div><div class="watch-case"><div class="watch-crown" aria-hidden="true"></div><div class="watch-screen">
+            <div class="watch-status"><span>9:41</span><span>●●●</span></div>
+            <section class="watch-panel is-active" data-watch-panel="menu"><small>DAL CONNECT</small><h4>Good afternoon</h4><button data-watch-route="network"><span>◎</span> Networking</button><button data-watch-route="calendar"><span>▣</span> Calendar</button><button data-watch-route="availability"><span>⌂</span> Study Space</button></section>
+            <section class="watch-panel" data-watch-panel="network"><button class="watch-back" data-watch-route="menu">‹</button><small>NETWORKING</small><h4>Nearby students</h4><button class="people-row" data-watch-chat="Maya"><span>M</span><b>Maya · Design</b><em>Say hi</em></button><button class="people-row" data-watch-chat="Alex"><span>A</span><b>Alex · CS</b><em>Say hi</em></button></section>
+            <section class="watch-panel watch-chat" data-watch-panel="chat"><button class="watch-back" data-watch-route="network">‹</button><small>MESSAGE</small><h4 data-watch-chat-name>Maya</h4><div class="chat-bubble">Hey! Are you free to study today?</div><label><span class="sr-only">Message</span><input data-watch-chat-input value="Hi! Yes, I am."></label><button class="watch-primary" data-watch-send>Send</button></section>
+            <section class="watch-panel" data-watch-panel="calendar"><button class="watch-back" data-watch-route="menu">‹</button><small>TODAY</small><h4>Your calendar</h4><button class="calendar-row" data-watch-message="HCI critique opens at 10:00 AM"><b>10:00</b><span>HCI critique<small>Goldberg 127</small></span></button><button class="calendar-row" data-watch-message="Team check-in opens at 2:30 PM"><b>2:30</b><span>Team check-in<small>Online</small></span></button><button class="calendar-row booked-row" data-watch-booking hidden><b data-watch-calendar-time>6:00</b><span>Study room booked<small data-watch-calendar-location>Killam · Room A</small></span></button></section>
+            <section class="watch-panel" data-watch-panel="availability"><button class="watch-back" data-watch-route="menu">‹</button><small>STUDY SPACE</small><h4>Availability</h4><button class="library-row" data-watch-library="Killam Library"><span>Killam Library</span><b>5%</b><i><em style="width:5%"></em></i></button><button class="library-row" data-watch-library="Sexton Library"><span>Sexton Library</span><b>25%</b><i><em style="width:25%"></em></i></button></section>
+            <section class="watch-panel" data-watch-panel="zones"><button class="watch-back" data-watch-route="availability">‹</button><small data-watch-library-label>KILLAM LIBRARY</small><h4>Choose a zone</h4><div class="zone-grid"><button data-watch-zone="A">A</button><button data-watch-zone="B">B</button><button data-watch-zone="C">C</button><button data-watch-zone="D">D</button><button data-watch-zone="E">E</button><button data-watch-zone="F">F</button></div></section>
+            <section class="watch-panel" data-watch-panel="slots"><button class="watch-back" data-watch-route="zones">‹</button><small data-watch-room-label>ROOM A</small><h4>Select a time</h4><div class="slot-grid"><button data-watch-time="7:30 AM">7:30</button><button data-watch-time="9:00 AM">9:00</button><button data-watch-time="10:30 AM">10:30</button><button data-watch-time="1:00 PM">1:00</button><button data-watch-time="2:00 PM">2:00</button><button data-watch-time="3:00 PM">3:00</button><button data-watch-time="4:00 PM">4:00</button><button data-watch-time="6:00 PM">6:00</button></div></section>
+            <section class="watch-panel watch-confirm" data-watch-panel="confirm"><small>CONFIRM</small><p>Book <b data-watch-confirm-room>Room A</b> for one hour at <b data-watch-confirm-time>2:00 PM</b> tomorrow?</p><button class="watch-primary" data-watch-route="success">Book</button><button data-watch-route="slots">Cancel</button></section>
+            <section class="watch-panel watch-confirm" data-watch-panel="success"><div class="watch-check">✓</div><h4>Booked</h4><p><span data-watch-success-location>Killam · Room A</span><br>Tomorrow, <span data-watch-success-time>2:00 PM</span></p><button data-watch-route="menu">Done</button></section>
+            <div class="watch-notice" data-watch-notice role="status" aria-live="polite"></div>
+          </div></div><div class="watch-strap bottom" aria-hidden="true"></div></div>
+        </div>
+          </div>
+        </div>
+      </article>
+
+      <article class="case-study reveal" id="freshlocal-market">
+        <div class="case-copy"><div class="case-meta"><span>02</span><span>Mobile commerce</span><span>Coursework</span></div><h3>FreshLocal Farmers’ Market</h3><p class="case-summary">A mobile marketplace flow for discovering local produce, learning about the farm, choosing pickup or delivery, and tracking an order.</p><dl class="case-facts"><div><dt>Problem</dt><dd>Local market shopping needs the convenience of ecommerce without losing provenance and farm context.</dd></div><div><dt>Project scope</dt><dd>Eight-screen flow, wireframes, visual system, product cards, checkout choices, confirmation, notifications, and profile.</dd></div><div><dt>Flow</dt><dd>Browse → filter → product → cart → fulfilment → confirmation.</dd></div><div><dt>Next step</dt><dd>Validate category labels, substitution handling, inventory changes, and delivery error states.</dd></div></dl></div>
+        <div class="demo-stage market-stage" data-demo="market" aria-label="Interactive FreshLocal farmers market prototype">
+          <div class="phone-shell market-phone"><div class="phone-speaker" aria-hidden="true"></div><div class="phone-screen market-hi-screen">
+            <div class="market-toast" data-market-toast role="status" aria-live="polite"></div>
+            <section class="demo-panel is-active" data-market-panel="home">
+              <header class="fresh-header"><div class="fresh-brand"><span>⌁</span><b>FreshLocal</b></div><div><button data-market-route="notifications" aria-label="Notifications">♧</button><button data-market-route="cart" aria-label="Shopping cart">🛒<em data-cart-count>0</em></button></div></header>
+              <button class="fresh-location" data-market-message="Market location set to Downtown Market">⌾ Downtown Market <span>›</span></button>
+              <label class="fresh-search"><span>⌕</span><input type="search" placeholder="Search fresh products..." data-market-search></label>
+              <div class="fresh-banner"><img src="https://images.unsplash.com/photo-1437275625246-b7a923f3d0f5?auto=format&amp;fit=crop&amp;w=900&amp;q=80" alt="Fresh produce at a farmers’ market"><div><small>🍓 SEASONAL</small><h4>Fresh Strawberries</h4><p>Just picked! Get 20% off this week</p><button data-market-open-product="strawberries">Shop Now</button></div></div>
+              <div class="fresh-section-title"><h5>Shop by Category</h5><button data-market-route="browse">See all ›</button></div>
+              <div class="fresh-categories"><button data-market-category="fruits"><span>🍎</span>Fruits</button><button data-market-category="vegetables"><span>⌁</span>Vegetables</button><button data-market-category="dairy"><span>▱</span>Dairy</button><button data-market-category="bread"><span>🌾</span>Bread</button></div>
+              <div class="fresh-section-title"><h5>Seasonal Picks</h5><button data-market-route="browse">See all ›</button></div>
+              <div class="fresh-home-products"><button class="fresh-product" data-market-open-product="strawberries"><img src="https://images.unsplash.com/photo-1589533610925-1cffc309ebaa?auto=format&amp;fit=crop&amp;w=600&amp;q=80" alt="Organic strawberries"><span><small>NEW</small><b>Organic Strawberries</b><em>$4.99 / lb</em></span></button><button class="fresh-product" data-market-open-product="tomatoes"><img src="https://images.unsplash.com/photo-1758487405872-8e179dfe703e?auto=format&amp;fit=crop&amp;w=600&amp;q=80" alt="Fresh tomatoes"><span><small>LOCAL</small><b>Fresh Tomatoes</b><em>$3.49 / lb</em></span></button></div>
+            </section>
+            <section class="demo-panel" data-market-panel="browse">
+              <div class="fresh-page-head"><button data-market-route="home" aria-label="Back">‹</button><h4>Fresh Vegetables</h4><div><button data-market-message="Grid view selected" aria-label="Grid view">▦</button><button data-market-message="Filters opened" aria-label="Filters">☷</button></div></div>
+              <div class="fresh-filters"><button class="active" data-market-filter="all">All</button><button data-market-filter="organic">Organic</button><button data-market-filter="local">Local</button><button data-market-filter="sale">On Sale</button></div>
+              <p class="fresh-results"><span data-market-result-count>6</span> products available</p>
+              <div class="fresh-product-grid">
+                <button class="fresh-grid-product" data-market-open-product="tomatoes" data-tags="organic local"><img src="https://images.unsplash.com/photo-1758487405872-8e179dfe703e?auto=format&amp;fit=crop&amp;w=600&amp;q=80" alt="Cherry tomatoes"><small>ORGANIC</small><b>Cherry Tomatoes</b><span>Green Valley Farm</span><em>$5.99 / lb</em></button>
+                <button class="fresh-grid-product" data-market-open-product="vegetables" data-tags="local"><img src="https://images.unsplash.com/photo-1554223745-ad862492c213?auto=format&amp;fit=crop&amp;w=600&amp;q=80" alt="Mixed vegetables"><small>NEW</small><b>Mixed Vegetables</b><span>Sunrise Organic</span><em>$7.49 / bundle</em></button>
+                <button class="fresh-grid-product" data-market-open-product="lettuce" data-tags="organic local"><img src="https://images.unsplash.com/photo-1741515042603-70545daeb0c4?auto=format&amp;fit=crop&amp;w=600&amp;q=80" alt="Fresh lettuce"><small>LOCAL</small><b>Fresh Lettuce</b><span>Valley Greens</span><em>$3.99 / head</em></button>
+                <button class="fresh-grid-product" data-market-open-product="heirloom" data-tags="sale local"><img src="https://images.unsplash.com/photo-1758487405872-8e179dfe703e?auto=format&amp;fit=crop&amp;w=600&amp;q=80" alt="Heirloom tomatoes"><small>SALE</small><b>Heirloom Tomatoes</b><span>Green Valley Farm</span><em>$6.99 / lb</em></button>
+                <button class="fresh-grid-product" data-market-open-product="carrots" data-tags="organic"><img src="https://images.unsplash.com/photo-1554223745-ad862492c213?auto=format&amp;fit=crop&amp;w=600&amp;q=80" alt="Organic carrots"><small>ORGANIC</small><b>Organic Carrots</b><span>Riverside Farm</span><em>$4.49 / bunch</em></button>
+                <button class="fresh-grid-product" data-market-open-product="peppers" data-tags="local"><img src="https://images.unsplash.com/photo-1554223745-ad862492c213?auto=format&amp;fit=crop&amp;w=600&amp;q=80" alt="Bell peppers"><small>LOCAL</small><b>Bell Peppers</b><span>Valley Greens</span><em>$5.49 / lb</em></button>
+              </div>
+              <p class="category-empty" data-market-empty hidden>No products match this search.</p>
+            </section>
+            <section class="demo-panel fresh-detail" data-market-panel="product"><div class="fresh-photo"><img data-market-detail-image src="" alt=""><div><button data-market-route="browse" aria-label="Back">‹</button><button data-market-favourite aria-label="Save product">♡</button></div></div><h4 data-market-detail-name>Organic Strawberries</h4><p class="fresh-price"><b data-market-detail-price>$4.99</b> <span data-market-detail-unit>/ lb</span></p><div class="fresh-tags"><span>🌿 Organic</span><span>⌾ Local</span><span>★ Fresh</span></div><button class="fresh-farm" data-market-message="Farm profile opened"><span>⌁</span><div><b data-market-detail-farm>Green Valley Farm</b><small>4.9 ★ · 2.3 miles away</small></div><em>Visit ›</em></button><h5>Description</h5><p data-market-detail-description>Fresh, locally grown produce selected at peak ripeness.</p><div class="fresh-detail-buy"><div><button data-market-detail-qty="minus">−</button><b data-market-detail-count>1</b><button data-market-detail-qty="plus">＋</button></div><button data-market-add>Add to Cart · $4.99</button></div></section>
+            <section class="demo-panel" data-market-panel="cart"><div class="fresh-page-head"><button data-market-route="home" aria-label="Back">‹</button><h4>Shopping Cart</h4><span><b data-cart-count>0</b> items</span></div><div class="fresh-cart-empty" data-market-cart-empty><span>🧺</span><h4>Your cart is empty</h4><button class="fresh-primary" data-market-route="browse">Browse products</button></div><div data-market-cart-filled hidden><div class="fresh-cart-items" data-market-cart-items></div><label class="fresh-promo"><input placeholder="Enter promo code" data-market-promo><button data-market-apply>Apply</button></label><dl class="fresh-totals"><div><dt>Subtotal</dt><dd data-market-subtotal>$0.00</dd></div><div><dt>Delivery Fee</dt><dd>$2.99</dd></div><div><dt>Total</dt><dd data-market-total>$2.99</dd></div></dl><button class="fresh-primary" data-market-route="checkout">Proceed to Checkout</button></div></section>
+            <section class="demo-panel" data-market-panel="checkout"><div class="fresh-page-head"><button data-market-route="cart" aria-label="Back">‹</button><h4>Checkout</h4><span></span></div><h5>Fulfilment Method</h5><div class="fresh-fulfilment"><button class="active" data-market-fulfilment="pickup"><b>Pickup</b><span>Pick up at the market</span></button><button data-market-fulfilment="delivery"><b>Delivery</b><span>Delivered to your door</span></button></div><div class="fresh-check-card"><small data-market-address-label>Pickup Location</small><b data-market-address>Downtown Farmers Market</b><span>123 Market Street · Halifax, NS</span><button data-market-message="Location options opened">Change location</button></div><label class="mini-label">Pickup time<select data-market-time><option>Saturday · 9:00 AM</option><option>Saturday · 11:00 AM</option><option>Sunday · 10:00 AM</option></select></label><dl class="fresh-totals"><div><dt>Order total</dt><dd data-market-checkout-total>$0.00</dd></div></dl><button class="fresh-primary" data-market-place>Place Order</button></section>
+            <section class="demo-panel fresh-confirmation" data-market-panel="confirmation"><div class="fresh-check">✓</div><small>ORDER FL-2048</small><h4>Order confirmed!</h4><p data-market-confirm-copy>Your pickup is scheduled.</p><div class="fresh-status"><i></i><i></i><i></i><span>Confirmed</span><span>Preparing</span><span>Ready</span></div><button class="fresh-primary" data-market-message="Order tracking opened">Track order</button><button class="fresh-link" data-market-route="home">Back to Home</button></section>
+            <section class="demo-panel" data-market-panel="notifications"><div class="fresh-page-head"><button data-market-route="home" aria-label="Back">‹</button><h4>Notifications</h4><button data-market-read>Mark read</button></div><button class="fresh-alert unread" data-market-message="Seasonal produce update opened"><img src="https://images.unsplash.com/photo-1589533610925-1cffc309ebaa?auto=format&amp;fit=crop&amp;w=300&amp;q=80" alt="Strawberries"><span><b>Fresh strawberries available!</b><small>Green Valley Farm · 20% off this week</small></span></button><button class="fresh-alert unread" data-market-message="Pickup reminder opened"><span class="alert-icon">🛍</span><span><b>Pickup reminder</b><small>Your order is ready Saturday at 9 AM.</small></span></button><button class="fresh-alert" data-market-message="Market event opened"><span class="alert-icon">📅</span><span><b>Weekend market</b><small>Meet local vendors this Sunday.</small></span></button></section>
+            <section class="demo-panel" data-market-panel="profile"><div class="fresh-page-head"><span></span><h4>Profile</h4><button data-market-message="Profile editing opened">Edit</button></div><div class="fresh-avatar">HL</div><h4 class="fresh-profile-name">Harshil</h4><p class="mini-muted fresh-profile-place">Halifax, Nova Scotia</p><label class="fresh-setting"><span><b>Order notifications</b><small>Pickup and delivery updates</small></span><input type="checkbox" checked></label><label class="fresh-setting"><span><b>Seasonal alerts</b><small>New products from nearby farms</small></span><input type="checkbox" checked></label><button class="fresh-primary" data-market-save>Save Preferences</button></section>
+            <nav class="fresh-tabbar" aria-label="FreshLocal navigation"><button class="active" data-market-tab="home"><span>⌁</span>Home</button><button data-market-tab="browse"><span>⌕</span>Browse</button><button data-market-tab="cart"><span>🛒</span>Cart<em data-cart-count>0</em></button><button data-market-tab="profile"><span>◎</span>Profile</button></nav>
+          </div></div>
+        </div>
+      </article>
+
+      <article class="case-study case-text ux-case-detail reveal" id="housing-match">
+        <div class="case-copy">
+          <header class="ux-case-header">
+            <div class="case-meta"><span>03</span><span>UX research</span><span>Low-fidelity coursework</span></div>
+            <h3>Housing & Roommate Matching</h3>
+            <p class="case-summary">A research-led low-fidelity concept that helps students evaluate housing options and roommate compatibility without losing the details that shape everyday living.</p>
+          </header>
+
+          <dl class="ux-snapshot" aria-label="Case study overview">
+            <div><dt>Challenge</dt><dd>Price, location, trust, and roommate compatibility are usually judged across disconnected tools.</dd></div>
+            <div><dt>Audience</dt><dd>Students looking for housing and compatible roommates.</dd></div>
+            <div><dt>Research</dt><dd>Focus group, affinity diagram, comparative evaluation, questionnaires, interviews, and task observation.</dd></div>
+            <div><dt>Deliverable</dt><dd>Low-fidelity wireframes and an evaluated interaction direction—not a high-fidelity or implemented product.</dd></div>
+          </dl>
+
+          <details class="case-expander">
+            <summary><span>Read full case study</span><span aria-hidden="true">＋</span></summary>
+          <div class="ux-story">
+            <section class="ux-story-row">
+              <div class="ux-story-label"><span>01</span><p>Research</p></div>
+              <div class="ux-story-copy"><h4>Finding what shapes a confident choice</h4><p>A focus group explored how students judge housing, trust, and roommate compatibility. A comparative evaluation of CollegePads and iROOMit then highlighted useful verification and filtering patterns, along with dense layouts and repeated controls to avoid.</p></div>
+              <div class="theme-stack" aria-label="Research themes"><span>Affordability + location</span><span>Trust + verification</span><span>Habits + dealbreakers</span><span>Clear comparisons</span></div>
+            </section>
+
+            <section class="ux-story-row">
+              <div class="ux-story-label"><span>02</span><p>Define</p></div>
+              <div class="ux-story-copy"><h4>From affinity themes to one focused journey</h4><p>The affinity diagram shaped a flow that keeps housing context and compatibility together. Students set preferences, apply filters, review ranked matches, compare important living habits, then connect or save.</p><div class="lowfi-flow" aria-label="Low-fidelity user flow"><span>Preferences</span><i>→</i><span>Filters</span><i>→</i><span>Matches</span><i>→</i><span>Compare</span><i>→</i><span>Connect</span></div></div>
+              <aside class="scope-card"><strong>Low-fidelity only</strong><p>The coursework produced wireframes for evaluating structure and flow—not a high-fidelity or coded product.</p></aside>
+            </section>
+
+            <section class="ux-story-row">
+              <div class="ux-story-label"><span>03</span><p>Evaluate</p></div>
+              <div class="ux-story-copy"><h4>Testing the structure before visual polish</h4><p>Two participants completed think-aloud tasks, questionnaires, and semi-structured interviews. Compatibility scores, verification, filters, and comparison worked well. Repeated questions, weak navigation, limited housing context, unclear match reasoning, and missing save feedback did not.</p></div>
+              <div class="ux-output"><p class="case-kicker">Methods</p><ul><li>Task observation</li><li>Questionnaire</li><li>Interview</li></ul></div>
+            </section>
+          </div>
+
+          <div class="ux-findings" aria-label="Case study findings">
+            <article><span>Validated direction</span><h4>Make comparison easy</h4><p>Compatibility scores, verification, focused filters, and side-by-side details helped participants assess a match.</p></article>
+            <article><span>Usability problems</span><h4>Reduce uncertainty</h4><p>Navigation, housing details, recommendation logic, and save feedback needed another iteration.</p></article>
+            <article><span>Next design pass</span><h4>Shorten and explain</h4><p>Merge repeated inputs, add progress and back navigation, explain match scores, and show a persistent saved state.</p></article>
+          </div>
+          <p class="evidence-note">Evidence used: final report, milestone documents, focus-group materials, affinity-diagram work, feature analysis, interview and questionnaire templates, and task-observation sheets.</p>
+          </details>
+        </div>
+      </article>
+    </section>
+
+    <section id="developer-projects" class="development section-pad">
+      <div class="section-heading reveal"><div><p class="eyebrow">02 / Software engineering</p><h2>Developer Projects</h2></div><p>Eight substantial web, mobile, data, and full-stack builds. Each project shows the product purpose, technical foundation, and a direct path to the working site or source where available.</p></div>
       <div class="project-list">
         <article class="project project-featured reveal">
           <div class="project-index">01</div>
-          <div class="project-copy">
-            <p class="project-type">Full-stack cricket simulator · Live game</p>
-            <h3>Cricket Perfect Run</h3>
-            <p>Draft an XI from real historical squads and chase an undefeated season across IPL, ODI World Cup, T20 World Cup, or World Test Championship cricket. The full-stack game uses Cricsheet-derived ratings, seeded simulations, complete scorecards, and server-verified Hard Mode leaderboards.</p>
-            <ul class="tags"><li>React 19</li><li>Spring Boot</li><li>Java 21</li><li>Supabase</li><li>Cricsheet</li></ul>
-            <div class="inline-links">
-              <a href="https://github.com/Harshil-Lotwala/cricket-perfect-run" target="_blank" rel="noopener">GitHub ↗</a>
-              <a href="https://harshil-lotwala.github.io/cricket-perfect-run/" target="_blank" rel="noopener">Play game ↗</a>
-            </div>
-          </div>
+          <div class="project-copy"><p class="project-type">Full-stack cricket simulator · Live game</p><h3>Cricket Perfect Run</h3><p>Draft an XI from real historical squads and chase an undefeated season across IPL, ODI World Cup, T20 World Cup, or World Test Championship cricket. The full-stack game uses Cricsheet-derived ratings, seeded simulations, complete scorecards, and server-verified Hard Mode leaderboards.</p><ul class="tags"><li>React 19</li><li>Spring Boot</li><li>Java 21</li><li>Supabase</li><li>Cricsheet</li></ul><div class="inline-links"><a href="https://github.com/Harshil-Lotwala/cricket-perfect-run" target="_blank" rel="noopener">GitHub ↗</a><a href="https://harshil-lotwala.github.io/cricket-perfect-run/" target="_blank" rel="noopener">Play game ↗</a></div></div>
           <div class="project-shape cricket-shape" aria-hidden="true"><span></span><span></span><span></span></div>
         </article>
-
         <article class="project reveal">
           <div class="project-index">02</div>
-          <div class="project-copy">
-            <p class="project-type">Hospitality platform · Live client product</p>
-            <h3>Vaibhavi’s Kitchen</h3>
-            <p>A responsive website and menu-management platform for a vegetarian multi-cuisine home kitchen in Surat. Customers can explore dishes and order for pickup through WhatsApp, while authenticated owners securely manage and publish the shared menu without editing code.</p>
-            <ul class="tags"><li>JavaScript</li><li>Netlify Functions</li><li>Netlify Blobs</li><li>Responsive UI</li><li>Authentication</li></ul>
-            <div class="inline-links">
-              <a href="https://github.com/Harshil-Lotwala/Vaibhavis-Kitchen" target="_blank" rel="noopener">GitHub ↗</a>
-              <a href="https://vaibhavis-kitchen.netlify.app" target="_blank" rel="noopener">Live site ↗</a>
-            </div>
-          </div>
+          <div class="project-copy"><p class="project-type">Hospitality platform · Live client product</p><h3>Vaibhavi’s Kitchen</h3><p>A responsive website and menu-management platform for a vegetarian multi-cuisine home kitchen in Surat. Customers can explore dishes and order for pickup through WhatsApp, while authenticated owners securely manage and publish the shared menu without editing code.</p><ul class="tags"><li>JavaScript</li><li>Netlify Functions</li><li>Netlify Blobs</li><li>Responsive UI</li><li>Authentication</li></ul><div class="inline-links"><a href="https://github.com/Harshil-Lotwala/Vaibhavis-Kitchen" target="_blank" rel="noopener">GitHub ↗</a><a href="https://vaibhavis-kitchen.netlify.app" target="_blank" rel="noopener">Live site ↗</a></div></div>
           <div class="project-shape kitchen-shape" aria-hidden="true"><span class="kitchen-bowl"></span><span class="kitchen-steam"></span><span class="kitchen-steam"></span><span class="kitchen-steam"></span></div>
         </article>
-
         <article class="project reveal">
           <div class="project-index">03</div>
-          <div class="project-copy">
-            <p class="project-type">Academic planning · Team project</p>
-            <h3>Degree Planner</h3>
-            <p>A semester-by-semester planning tool for Dalhousie CSCI students. As a senior developer, I designed core MySQL structures and contributed authentication and prerequisite planning across a six-person team.</p>
-            <ul class="tags"><li>React</li><li>Flask</li><li>MySQL</li><li>Git</li></ul>
-            <div class="inline-links"><a href="https://github.com/Harshil-Lotwala/Design-Your-Degree" target="_blank" rel="noopener">GitHub ↗</a></div>
-          </div>
+          <div class="project-copy"><p class="project-type">Academic planning platform</p><h3>Degree Planner</h3><p>A multi-year planning tool for Dalhousie computer science students. The product combines account access, prerequisite checks, course organization, and a structured MySQL data model so students can understand how present choices affect the rest of their degree.</p><ul class="tags"><li>React</li><li>Flask</li><li>MySQL</li><li>Git</li></ul><div class="inline-links"><a href="https://github.com/Harshil-Lotwala/Design-Your-Degree" target="_blank" rel="noopener">GitHub ↗</a></div></div>
           <div class="project-shape planner-shape" aria-hidden="true"><span></span><span></span><span></span></div>
         </article>
-
         <article class="project reveal">
           <div class="project-index">04</div>
-          <div class="project-copy">
-            <p class="project-type">AI learning tool · Two-person team</p>
-            <h3>AI Flashcard Generator</h3>
-            <p>Turns uploaded PDF or text notes into tailored study material, with adjustable card count and difficulty, persistent user data, and credit-based flashcard sets.</p>
-            <ul class="tags"><li>React</li><li>Node.js</li><li>MongoDB</li><li>Hugging Face</li></ul>
-            <div class="inline-links">
-              <a href="https://github.com/Harshil-Lotwala/flashcard" target="_blank" rel="noopener">GitHub ↗</a>
-              <a href="https://flaschard.vercel.app" target="_blank" rel="noopener">Live site ↗</a>
-            </div>
-          </div>
+          <div class="project-copy"><p class="project-type">AI-assisted learning tool</p><h3>AI Flashcard Generator</h3><p>Turns uploaded PDF or text notes into tailored study material. Users can adjust card count and difficulty, return to saved sets through persistent accounts, and manage credit-based generation without rebuilding a deck from the beginning.</p><ul class="tags"><li>React</li><li>Node.js</li><li>MongoDB</li><li>Hugging Face</li></ul><div class="inline-links"><a href="https://github.com/Harshil-Lotwala/flashcard" target="_blank" rel="noopener">GitHub ↗</a><a href="https://flaschard.vercel.app" target="_blank" rel="noopener">Live site ↗</a></div></div>
           <div class="project-shape cards-shape" aria-hidden="true"><span>A</span><span>Q</span></div>
         </article>
-
         <article class="project reveal">
           <div class="project-index">05</div>
-          <div class="project-copy">
-            <p class="project-type">Healthcare reference · NSHA client project</p>
-            <h3>Geriatric Psychotropic Green Card</h3>
-            <p>A drug-reference application for healthcare professionals. I built and updated React components, maintained MySQL content, and worked within an Agile client-development process.</p>
-            <ul class="tags"><li>React</li><li>JavaScript</li><li>Node.js</li><li>MySQL</li></ul>
-            <div class="inline-links"><a href="https://github.com/Harshil-Lotwala/GPGC" target="_blank" rel="noopener">GitHub ↗</a></div>
-          </div>
-          <div class="project-shape health-shape" aria-hidden="true">
-            <span class="medical-cross"></span>
-            <span class="medical-pill"></span>
-            <span class="medical-line"></span>
-            <span class="medical-line"></span>
-          </div>
+          <div class="project-copy"><p class="project-type">Healthcare reference · NSHA client project</p><h3>Geriatric Psychotropic Green Card</h3><p>A drug-reference application for healthcare professionals. The project combines React interface components, maintained MySQL content, and an Agile client-development process to make clinical reference information easier to access and update.</p><ul class="tags"><li>React</li><li>JavaScript</li><li>Node.js</li><li>MySQL</li></ul><div class="inline-links"><a href="https://github.com/Harshil-Lotwala/GPGC" target="_blank" rel="noopener">GitHub ↗</a></div></div>
+          <div class="project-shape health-shape" aria-hidden="true"><span class="medical-cross"></span><span class="medical-pill"></span><span class="medical-line"></span><span class="medical-line"></span></div>
         </article>
-
         <article class="project reveal">
           <div class="project-index">06</div>
-          <div class="project-copy">
-            <p class="project-type">Mobile productivity · Location-aware</p>
-            <h3>FocusTrail</h3>
-            <p>Helps students discover productive study locations, track sessions, save favourites, and rate their environment through map-based location search.</p>
-            <ul class="tags"><li>React Native</li><li>Expo</li><li>Firestore</li><li>Google Places</li></ul>
-            <div class="inline-links"><a href="https://github.com/Harshil-Lotwala/FocusTrail" target="_blank" rel="noopener">GitHub ↗</a></div>
-          </div>
+          <div class="project-copy"><p class="project-type">Mobile productivity · Location-aware</p><h3>FocusTrail</h3><p>Helps students discover productive study locations, save favourites, track focused sessions, and rate the qualities of each environment. Map-based location search connects the mobile interface with places users can visit in the real world.</p><ul class="tags"><li>React Native</li><li>Expo</li><li>Firestore</li><li>Google Places</li></ul><div class="inline-links"><a href="https://github.com/Harshil-Lotwala/FocusTrail" target="_blank" rel="noopener">GitHub ↗</a></div></div>
           <div class="project-shape map-shape" aria-hidden="true"><span></span></div>
         </article>
-
         <article class="project reveal">
           <div class="project-index">07</div>
-          <div class="project-copy">
-            <p class="project-type">Personal finance · Live product</p>
-            <h3>Professional Stock Dashboard</h3>
-            <p>A responsive market dashboard with financial API data, watchlists, charts, key indicators, and lightweight portfolio tracking.</p>
-            <ul class="tags"><li>JavaScript</li><li>Financial APIs</li><li>Responsive UI</li></ul>
-            <div class="inline-links">
-              <a href="https://github.com/Harshil-Lotwala/stock-dashboard" target="_blank" rel="noopener">GitHub ↗</a>
-              <a href="https://stock-dashboard7781.netlify.app" target="_blank" rel="noopener">Live site ↗</a>
-            </div>
-          </div>
+          <div class="project-copy"><p class="project-type">Personal finance · Live product</p><h3>Professional Stock Dashboard</h3><p>A responsive market dashboard that brings financial API data, watchlists, charts, key indicators, and lightweight portfolio tracking into one interface. The layout adapts across screen sizes while keeping frequently checked market information easy to scan.</p><ul class="tags"><li>JavaScript</li><li>Financial APIs</li><li>Responsive UI</li></ul><div class="inline-links"><a href="https://github.com/Harshil-Lotwala/stock-dashboard" target="_blank" rel="noopener">GitHub ↗</a><a href="https://stock-dashboard7781.netlify.app" target="_blank" rel="noopener">Live site ↗</a></div></div>
           <div class="project-shape chart-shape" aria-hidden="true"><span></span><span></span><span></span><span></span></div>
         </article>
-
         <article class="project reveal">
           <div class="project-index">08</div>
-          <div class="project-copy">
-            <p class="project-type">Android marketplace · Five-person team</p>
-            <h3>Job Marketplace Mobile App</h3>
-            <p>An Android application for posting, browsing, filtering, and applying for jobs. The team integrated authentication and PayPal payments, with automated coverage through JUnit and Espresso.</p>
-            <ul class="tags"><li>Java</li><li>Android Studio</li><li>Firebase</li><li>PayPal SDK</li><li>JUnit</li><li>Espresso</li></ul>
-          </div>
+          <div class="project-copy"><p class="project-type">Android marketplace</p><h3>Job Marketplace Mobile App</h3><p>An Android application for posting, browsing, filtering, and applying for jobs. Authentication and PayPal payments support the main marketplace flow, while JUnit and Espresso provide automated coverage for core application behavior.</p><ul class="tags"><li>Java</li><li>Android Studio</li><li>Firebase</li><li>PayPal SDK</li><li>JUnit</li><li>Espresso</li></ul></div>
           <div class="project-shape job-shape" aria-hidden="true"><span></span><span></span><span></span></div>
         </article>
       </div>
     </section>
 
     <section id="about" class="about section-pad">
-      <div class="about-intro reveal">
-        <p class="eyebrow">02 / About</p>
-        <h2>Curious by nature.<br><em>Practical by design.</em></h2>
+      <div class="about-title reveal"><p class="eyebrow">03 / About</p><div><h2>Design instincts.<br><em>Developer execution.</em></h2><p class="about-deck">I work across the full path from understanding a product problem to building a clear, responsive solution.</p></div></div>
+      <div class="about-main">
+        <div class="about-copy reveal"><p class="lead">I like finding the point where a product becomes confusing, then designing and building a clearer next step.</p><p>I’m completing a Bachelor of Applied Computer Science at Dalhousie University, with coursework in user experience design and evaluation alongside web and mobile development. That combination helps me connect accessibility, responsive behavior, product decisions, data, and implementation.</p><a class="text-link" href="Resume_Harshil.pdf" target="_blank" rel="noopener">Read my résumé ↗</a></div>
+        <article class="experience-card reveal"><div class="experience-top"><span>Work experience</span><span>Professional freelance</span></div><p class="company">SCITCO · Scott IT Consultant</p><h3>UI/UX Designer & Front-End Developer</h3><p>Designed and structured a responsive service website that turned a broad technical offering into a clearer path from understanding the business to booking a consultation.</p><dl><div><dt>Design</dt><dd>Information architecture, content hierarchy, service pages, navigation, consultation flow, and responsive layouts.</dd></div><div><dt>Delivery</dt><dd>Refined mobile typography, card behavior, page structure, tabs, and footer interactions for desktop and touch screens.</dd></div></dl></article>
       </div>
-      <div class="about-grid">
-        <div class="about-copy reveal">
-          <p class="lead">I’m Harshil, a developer and product designer who enjoys untangling difficult problems and shaping the result into something people can use without a manual.</p>
-          <p>I’m completing a Bachelor of Science in Applied Computer Science at Dalhousie University, with certificates in Web & Mobile Development and User Experience Design & Evaluation. My work sits where engineering, product thinking, and visual clarity meet.</p>
-          <a class="text-link" href="Resume_Harshil.pdf" target="_blank" rel="noopener">Read my résumé <span>↗</span></a>
-        </div>
-        <div class="experience-card reveal">
-          <div class="experience-top"><span>Experience</span><span>2026</span></div>
-          <h3>Freelance Product Designer</h3>
-          <p class="company">Scott IT Consultant (SCITCO) · Remote / Montréal</p>
-          <p>Designed and structured a responsive business website, improving service presentation through clearer content, navigation, page flows, and calls to action across desktop and mobile.</p>
+      <div class="about-skills">
+        <div class="skills-intro reveal"><p class="eyebrow">Skills</p><h3>A toolkit for both sides of the work.</h3></div>
+        <div class="skill-groups">
+          <div class="skill-group reveal"><span>01</span><h4>UX & product</h4><p>Focus groups · Affinity diagrams · Comparative evaluation · User flows · Information architecture · Usability testing</p></div>
+          <div class="skill-group reveal"><span>02</span><h4>Interface design</h4><p>Figma · Wireframes · Interactive prototypes · Responsive UI · Accessibility · Design systems</p></div>
+          <div class="skill-group reveal"><span>03</span><h4>Front-end</h4><p>HTML · CSS · JavaScript · TypeScript · React · React Native · Expo</p></div>
+          <div class="skill-group reveal"><span>04</span><h4>Development</h4><p>Java · Python · Node.js · Flask · SQL · MySQL · MongoDB · Firebase · REST APIs</p></div>
+          <div class="skill-group reveal"><span>05</span><h4>Workflow</h4><p>Git · GitHub · Jira · Android Studio · Agile delivery · JUnit · Espresso</p></div>
         </div>
       </div>
     </section>
-
-    <section class="skills section-pad" aria-labelledby="skills-title">
-      <div class="skills-heading reveal">
-        <p class="eyebrow">03 / Toolkit</p>
-        <h2 id="skills-title">Tools I use to<br>make ideas real.</h2>
-      </div>
-      <div class="skill-groups">
-        <div class="skill-group reveal"><span>01</span><h3>Languages</h3><p>Java · JavaScript · TypeScript · Python · SQL · HTML · CSS</p></div>
-        <div class="skill-group reveal"><span>02</span><h3>Frameworks</h3><p>React · Node.js · Flask · React Native · Expo</p></div>
-        <div class="skill-group reveal"><span>03</span><h3>Data</h3><p>MySQL · SQLite · MongoDB · Firebase · Firestore</p></div>
-        <div class="skill-group reveal"><span>04</span><h3>Product & tools</h3><p>Figma · Git · GitHub · Jira · Android Studio · REST APIs · Agile · Testing</p></div>
-      </div>
-    </section>
-
-    <section class="education section-pad">
-      <div class="education-logo reveal">
-        <img src="dalhousie-logo.svg" alt="Dalhousie University">
-      </div>
-      <div class="education-copy reveal">
-        <p class="eyebrow">04 / Education</p>
-        <p class="school-name">Dalhousie University · Halifax, Nova Scotia</p>
-        <h2>Applied Computer Science</h2>
-        <p class="degree">Bachelor of Science · Sexton Scholar</p>
-        <p>January 2023 — Expected August 2027 · Halifax, Nova Scotia</p>
-        <div class="certificates">
-          <span>Certificate · Web & Mobile Development</span>
-          <span>Certificate · UX Design & Evaluation</span>
-        </div>
-      </div>
-    </section>
-
-    <section id="contact" class="contact section-pad">
-      <div class="contact-copy reveal">
-        <p class="eyebrow">05 / Contact</p>
-        <h2>Have a good<br>problem to solve?</h2>
-        <p>I’m always interested in thoughtful products, collaborative teams, and opportunities to keep learning.</p>
-        <a class="email-link" href="mailto:harshil.lotwala@dal.ca">harshil.lotwala@dal.ca <span>↗</span></a>
-      </div>
-      <form class="contact-form reveal" action="https://formspree.io/f/manbgkop" method="POST">
-        <label>Name<input type="text" name="name" autocomplete="name" required placeholder="Your name"></label>
-        <label>Email<input type="email" name="email" autocomplete="email" required placeholder="you@example.com"></label>
-        <label>Message<textarea name="message" rows="4" required placeholder="Tell me a little about your idea..."></textarea></label>
-        <button class="button button-light" type="submit">Send message <span>↗</span></button>
-        <p class="form-status" role="status" aria-live="polite"></p>
-      </form>
-    </section>
+    <section class="education section-pad"><img src="dalhousie-logo.svg" alt="Dalhousie University" class="education-logo reveal"><div class="education-copy reveal"><p class="eyebrow">04 / Education</p><h2>Applied Computer Science</h2><p>Dalhousie University · Halifax, Nova Scotia</p><p>Bachelor’s degree · Fourth-year student · Expected 2027</p><div><span>UX Design & Evaluation</span><span>Web & Mobile Development</span></div></div></section>
+    <section id="contact" class="contact section-pad"><div class="contact-copy reveal"><p class="eyebrow">05 / Contact</p><h2>Let’s make the next step clear.</h2><p>I’m looking for UI/UX, product design, front-end/UI, and hybrid designer–developer opportunities.</p><a class="email-link" href="mailto:harshil.lotwala@dal.ca">harshil.lotwala@dal.ca ↗</a></div><form class="contact-form reveal" action="https://formspree.io/f/manbgkop" method="POST"><label>Name<input type="text" name="name" autocomplete="name" required placeholder="Your name"></label><label>Email<input type="email" name="email" autocomplete="email" required placeholder="you@example.com"></label><label>Message<textarea name="message" rows="4" required placeholder="Tell me about the role or project"></textarea></label><button class="button button-light" type="submit">Send message <span>↗</span></button><p class="form-status" role="status" aria-live="polite"></p></form></section>
   </main>
 
-  <footer class="site-footer">
-    <div class="footer-top">
-      <a class="wordmark footer-mark" href="#top"><span class="wordmark-name">Harshil Lotwala</span></a>
-      <p>Developer · Designer · Problem solver</p>
-    </div>
-    <div class="footer-bottom">
-      <p>© <span id="year"></span> Harshil Lotwala</p>
-      <div class="social-links">
-        <a href="https://github.com/Harshil-Lotwala" target="_blank" rel="noopener">GitHub ↗</a>
-        <a href="https://www.linkedin.com/in/harshil-lotwala" target="_blank" rel="noopener">LinkedIn ↗</a>
-        <a href="tel:+16478974634">Phone ↗</a>
-      </div>
-      <a href="#top">Back to top ↑</a>
-    </div>
-  </footer>
-
-  <script src="script.js"></script>
+  <footer class="site-footer"><div><a class="wordmark" href="#top"><span class="wordmark-dot" aria-hidden="true"></span><span>Harshil Lotwala</span></a><p>Product designer · UI/UX · Front-end</p></div><nav aria-label="Social links"><a href="https://github.com/Harshil-Lotwala" target="_blank" rel="noopener">GitHub ↗</a><a href="https://www.linkedin.com/in/harshil-lotwala" target="_blank" rel="noopener">LinkedIn ↗</a><a href="#top">Back to top ↑</a></nav><p>© <span id="year"></span> Harshil Lotwala</p></footer>
+  <script src="script.js?v=20260909-4"></script>
 </body>
 </html>

@@ -2,17 +2,19 @@
 
 [View on Netlify](https://harshil-lotwala-portfolio.netlify.app) · [View on GitHub Pages](https://harshil-lotwala.github.io/Portfolio/)
 
-A responsive, editorial-style portfolio for Harshil Lotwala, a product-minded developer and designer studying Applied Computer Science at Dalhousie University.
+A responsive, editorial-style portfolio for Harshil Lotwala, presented equally as a product designer and software developer studying Applied Computer Science at Dalhousie University.
 
-The site presents selected web and mobile projects, professional experience, technical skills, education, and contact information in a single accessible page.
+The site combines UI/UX case studies, interactive prototypes, eight software projects, professional freelance work, technical skills, education, and contact information in a single accessible page.
 
 ## Highlights
 
 - Responsive layouts for small phones, tablets, laptops, desktops, and ultra-wide displays
 - Full-screen mobile navigation with keyboard and orientation support
-- Eight project case studies with GitHub and live-demo links where available
+- Three UI/UX case-study cards, including one multi-device DAL Connect project and the FreshLocal mobile experience
+- Eight software projects with GitHub and live-demo links where available
+- A working DAL Connect Apple Watch experience with messaging, study-space booking, and calendar persistence
 - Scroll-triggered content reveals using `IntersectionObserver`
-- Continuously rotating specialty strip with eight unique disciplines
+- Clear 50/50 design-and-development positioning
 - Accessible focus states, semantic landmarks, reduced-motion support, and a skip link
 - Formspree contact form with inline success and error feedback
 - Custom portfolio favicon and official Dalhousie University logo asset
@@ -20,12 +22,12 @@ The site presents selected web and mobile projects, professional experience, tec
 
 ## Portfolio Sections
 
-1. **Introduction** — positioning, location, availability, and primary actions
-2. **Selected Work** — Cricket Perfect Run, Vaibhavi’s Kitchen, Degree Planner, AI Flashcard Generator, GPGC, FocusTrail, Stock Dashboard, and Job Marketplace
-3. **About & Experience** — background and freelance product-design work for SCITCO
-4. **Toolkit** — languages, frameworks, databases, product tools, APIs, and engineering practices
-5. **Education** — B.Sc. Applied Computer Science, Sexton Scholar recognition, and certificates at Dalhousie University
-6. **Contact** — email, social links, phone, and contact form
+1. **Introduction** — equal product-design and development positioning
+2. **Designer Projects** — DAL Connect across phone and watch, FreshLocal, and Housing & Roommate Matching
+3. **Developer Projects** — Cricket Perfect Run, Vaibhavi’s Kitchen, Degree Planner, AI Flashcard Generator, GPGC, FocusTrail, Stock Dashboard, and Job Marketplace
+4. **About, Experience & Skills** — SCITCO freelance work, UX methods, interface skills, languages, frameworks, APIs, databases, and testing
+5. **Education** — Bachelor of Applied Computer Science at Dalhousie University
+6. **Contact** — email, social links, and contact form
 
 ## Technology
 
