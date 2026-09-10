@@ -1,3 +1,14 @@
+// A previously used home link left #main in the URL, causing browsers to
+// restore the page below the beginning of the hero after a refresh.
+if (window.location.hash === '#main') {
+  try {
+    window.history.replaceState(null, '', window.location.href.replace(/#main$/, ''));
+  } catch (_) {
+    // Scrolling still restores the intended start position if history is unavailable.
+  }
+  window.requestAnimationFrame(() => window.scrollTo({ top: 0, left: 0, behavior: 'auto' }));
+}
+
 const menuButton = document.querySelector('.menu-toggle');
 const nav = document.querySelector('.site-nav');
 
