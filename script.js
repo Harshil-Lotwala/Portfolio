@@ -312,7 +312,14 @@ if (market) {
     showMarket('confirmation');
   });
   market.querySelector('[data-market-favourite]')?.addEventListener('click', event => { event.currentTarget.textContent = event.currentTarget.textContent === '♡' ? '♥' : '♡'; flash(toast, 'Saved products updated'); });
-  market.querySelector('[data-market-read]')?.addEventListener('click', event => { market.querySelectorAll('.fresh-alert').forEach(alert => alert.classList.remove('unread')); event.currentTarget.textContent = 'All read'; flash(toast, 'Notifications marked as read'); });
+  market.querySelector('[data-market-read]')?.addEventListener('click', event => {
+    market.querySelectorAll('.fresh-alert').forEach(alert => alert.classList.remove('unread'));
+    event.currentTarget.textContent = 'All read';
+    event.currentTarget.classList.add('is-complete');
+    event.currentTarget.disabled = true;
+    event.currentTarget.setAttribute('aria-label', 'All notifications are read');
+    flash(toast, 'Notifications marked as read');
+  });
   market.querySelector('[data-market-save]')?.addEventListener('click', () => flash(toast, 'Preferences saved'));
   market.querySelectorAll('[data-market-message]').forEach(button => button.addEventListener('click', () => flash(toast, button.dataset.marketMessage)));
   updateDetail();
