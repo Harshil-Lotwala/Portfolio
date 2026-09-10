@@ -1,6 +1,6 @@
 # Harshil Lotwala — Portfolio
 
-[View on Netlify](https://harshil-lotwala-portfolio.netlify.app) · [View on GitHub Pages](https://harshil-lotwala.github.io/Portfolio/)
+[View Live Portfolio](https://harshil-lotwala.github.io/Portfolio/)
 
 A responsive, editorial-style portfolio for Harshil Lotwala, presented equally as a UX designer and full stack developer studying Applied Computer Science at Dalhousie University.
 
@@ -63,7 +63,7 @@ Content width is capped on very large screens so typography and project layouts 
 ├── Resume_Harshil.pdf      Primary résumé linked by the website
 ├── dalhousie-logo.svg      Official Dalhousie logo used in Education
 ├── favicon.svg             Portfolio browser icon
-├── netlify.toml            Netlify configuration
+├── netlify.toml            Redirects the legacy Netlify URL to GitHub Pages
 └── README.md               Project documentation
 ```
 
@@ -116,12 +116,9 @@ The contact form submits to Formspree. To use another Formspree account, replace
 
 ## Deployment
 
-The repository supports two static hosts:
+GitHub Pages is the canonical deployment and publishes through `.github/workflows/deploy-pages.yml` after each push to `main`.
 
-- **Netlify** publishes the repository root with no build command.
-- **GitHub Pages** deploys through `.github/workflows/deploy-pages.yml` after each push to `main`.
-
-The GitHub Pages deployment is available at [harshil-lotwala.github.io/Portfolio](https://harshil-lotwala.github.io/Portfolio/).
+The legacy Netlify address redirects to [harshil-lotwala.github.io/Portfolio](https://harshil-lotwala.github.io/Portfolio/), ensuring both previously shared portfolio links open the same website.
 
 ## Author
 
@@ -129,7 +126,7 @@ The GitHub Pages deployment is available at [harshil-lotwala.github.io/Portfolio
 
 - [GitHub](https://github.com/Harshil-Lotwala)
 - [LinkedIn](https://www.linkedin.com/in/harshil-lotwala)
-- [Portfolio](https://harshil-lotwala-portfolio.netlify.app)
+- [Portfolio](https://harshil-lotwala.github.io/Portfolio/)
 - Email: [harshil.lotwala@dal.ca](mailto:harshil.lotwala@dal.ca)
 
 ## Credits
