@@ -2,7 +2,7 @@
 
 [View on Netlify](https://harshil-lotwala-portfolio.netlify.app) · [View on GitHub Pages](https://harshil-lotwala.github.io/Portfolio/)
 
-A responsive, editorial-style portfolio for Harshil Lotwala, presented equally as a product designer and software developer studying Applied Computer Science at Dalhousie University.
+A responsive, editorial-style portfolio for Harshil Lotwala, presented equally as a UX designer and full stack developer studying Applied Computer Science at Dalhousie University.
 
 The site combines UI/UX case studies, interactive prototypes, eight software projects, professional freelance work, technical skills, education, and contact information in a single accessible page.
 
@@ -10,9 +10,9 @@ The site combines UI/UX case studies, interactive prototypes, eight software pro
 
 - Responsive layouts for small phones, tablets, laptops, desktops, and ultra-wide displays
 - Full-screen mobile navigation with keyboard and orientation support
-- Three UI/UX case-study cards, including one multi-device DAL Connect project and the FreshLocal mobile experience
+- Interactive front-end coursework prototypes for DAL Connect and FreshLocal, plus a detailed low-fidelity housing case study
 - Eight software projects with GitHub and live-demo links where available
-- A working DAL Connect Apple Watch experience with messaging, study-space booking, and calendar persistence
+- A DAL Connect Apple Watch prototype with messaging, study-space booking, and simulated calendar persistence
 - Scroll-triggered content reveals using `IntersectionObserver`
 - Clear 50/50 design-and-development positioning
 - Accessible focus states, semantic landmarks, reduced-motion support, and a skip link
@@ -22,7 +22,7 @@ The site combines UI/UX case studies, interactive prototypes, eight software pro
 
 ## Portfolio Sections
 
-1. **Introduction** — equal product-design and development positioning
+1. **Introduction** — equal UX design and full stack development positioning
 2. **UI/UX Projects** — DAL Connect across phone and watch, FreshLocal, and Housing & Roommate Matching
 3. **Development Projects** — AI Flashcard Generator, Degree Planner, FocusTrail, Job Marketplace, Vaibhavi’s Kitchen, Stock Dashboard, GPGC, and Cricket Perfect Run
 4. **About & Experience** — background and SCITCO freelance product design work
@@ -87,14 +87,22 @@ Then open [http://localhost:8000](http://localhost:8000).
 - Primary résumé: `Resume_Harshil.pdf`
 - Browser icon: `favicon.svg`
 
-The main design tokens are declared at the top of `styles.css`:
+The main design tokens are declared at the top of `styles.css`. The light editorial palette combines warm neutrals with muted sage, sky, rose, forest, slate, claret, and brass accents:
 
 ```css
 :root {
-  --paper: #f3f0e8;
-  --ink: #151515;
-  --acid: #d9ff43;
-  --blue: #5568ff;
+  --paper: #f4f1ea;
+  --surface: #fbfaf7;
+  --sand: #e8dfc9;
+  --sage: #d9e3da;
+  --sky: #dce5ec;
+  --rose: #e7d9d7;
+  --ink: #202a2a;
+  --muted: #606c69;
+  --forest: #2f5b50;
+  --slate: #3f596a;
+  --claret: #764955;
+  --brass: #9a7443;
 }
 ```
 
