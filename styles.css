@@ -420,7 +420,7 @@ section[id] { scroll-margin-top: 82px; }
   .project-index,.project-copy,.project-shape,.project:nth-child(even) .project-copy,.project:nth-child(even) .project-shape { grid-column: 1; }
   .project-index { grid-row: auto; }
   .project h3 { font-size: clamp(36px,11vw,53px); overflow-wrap: anywhere; }
-  .project-shape { width: min(100%,360px); height: clamp(220px,70vw,270px); }
+  .project-shape { width: min(calc(100% - 16px),360px); height: clamp(220px,70vw,270px); transform: none !important; }
   .cards-shape span { width: 48%; height: 88%; }
   .cards-shape span:first-child { left: 5%; }.cards-shape span:last-child { right: 5%; }
   .about-title h2 { font-size: clamp(44px,13vw,64px); }
