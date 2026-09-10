@@ -65,7 +65,7 @@ section[id] { scroll-margin-top: 82px; }
 .hero-status { display: flex; align-items: center; gap: 10px; }
 .hero-status span { width: 9px; height: 9px; border-radius: 50%; background: var(--forest); box-shadow: 0 0 0 4px rgba(47,91,80,.14); }
 .hero h1 { max-width: 1450px; margin: clamp(70px,12vh,155px) 0 clamp(70px,11vh,135px); font-size: clamp(64px,7.7vw,132px); line-height: .9; letter-spacing: -.075em; text-wrap: balance; }
-.hero h1 em { color: var(--violet); font-family: Georgia,serif; font-weight: 400; }
+.hero h1 em { color: var(--violet); font-family: Georgia,serif; font-style: italic; font-weight: 400; }
 .hero-bottom { padding-left: 26%; display: grid; grid-template-columns: minmax(0,730px) auto; justify-content: space-between; gap: clamp(50px,8vw,130px); align-items: end; }
 .hero-lead { max-width: 730px; margin: 0; font-size: clamp(18px,1.45vw,23px); line-height: 1.55; }
 .hero-actions { margin: 0; display: flex; align-items: flex-start; flex-direction: column; gap: 22px; }
