@@ -23,8 +23,8 @@ The site combines UI/UX case studies, interactive prototypes, eight software pro
 ## Portfolio Sections
 
 1. **Introduction** — equal product-design and development positioning
-2. **Designer Projects** — DAL Connect across phone and watch, FreshLocal, and Housing & Roommate Matching
-3. **Developer Projects** — AI Flashcard Generator, Degree Planner, FocusTrail, Job Marketplace, Vaibhavi’s Kitchen, Stock Dashboard, GPGC, and Cricket Perfect Run
+2. **UI/UX Projects** — DAL Connect across phone and watch, FreshLocal, and Housing & Roommate Matching
+3. **Development Projects** — AI Flashcard Generator, Degree Planner, FocusTrail, Job Marketplace, Vaibhavi’s Kitchen, Stock Dashboard, GPGC, and Cricket Perfect Run
 4. **About & Experience** — background and SCITCO freelance product design work
 5. **Skills** — UX, interface design, front-end, backend, databases, tools/workflow, and AI-assisted design and development
 6. **Education** — Bachelor of Applied Computer Science at Dalhousie University
