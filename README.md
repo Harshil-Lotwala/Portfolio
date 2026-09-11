@@ -61,7 +61,9 @@ Content width is capped on very large screens so typography and project layouts 
 ├── index.html              Main portfolio content
 ├── styles.css              Visual system and responsive layouts
 ├── script.js               Navigation, reveals, marquee, and form behavior
-├── Resume_Harshil.pdf      Primary résumé linked by the website
+├── Resume_Harshil_UIUX.pdf UI/UX and product design résumé
+├── Resume_Harshil_Development.pdf
+│                           Software development résumé
 ├── dalhousie-logo.svg      Official Dalhousie logo used in Education
 ├── favicon.svg             Portfolio browser icon
 ├── netlify.toml            Redirects the legacy Netlify URL to GitHub Pages
@@ -88,7 +90,8 @@ Then open [http://localhost:8000](http://localhost:8000).
 - Colors, typography, spacing, and breakpoints: `styles.css`
 - Navigation, animations, marquee, and form handling: `script.js`
 - North Atlantic Bank prototype: `projects/north-atlantic-bank/`
-- Primary résumé: `Resume_Harshil.pdf`
+- UI/UX résumé: `Resume_Harshil_UIUX.pdf`
+- Development résumé: `Resume_Harshil_Development.pdf`
 - Browser icon: `favicon.svg`
 
 The main design tokens are declared at the top of `styles.css`. The light editorial palette combines warm neutrals with muted sage, sky, rose, forest, slate, claret, and brass accents:
