@@ -400,11 +400,10 @@ section[id] { scroll-margin-top: 82px; }
   .site-nav::before { content: "Navigation"; margin-bottom: 22px; color: var(--claret); font: 500 10px/1 var(--mono); letter-spacing: .12em; text-transform: uppercase; }
   .site-nav::after { content: "UX Designer · Full Stack Developer\A Halifax, NS · Open to opportunities"; margin-top: auto; padding-top: 22px; border-top: 1px solid var(--line); color: var(--muted); white-space: pre-line; font: 500 10px/1.8 var(--mono); letter-spacing: .06em; text-transform: uppercase; }
   .site-nav.open { clip-path: inset(0); visibility: visible; pointer-events: auto; }
-  .site-nav a { counter-increment: mobile-nav; width: 100%; padding: 16px 0 !important; display: grid; grid-template-columns: 30px minmax(0,1fr) auto; gap: 10px; align-items: center; border: 0 !important; border-top: 1px solid var(--line) !important; font-size: clamp(27px,7.6vw,42px); font-weight: 700; line-height: 1.02; letter-spacing: -.055em; }
+  .site-nav a { counter-increment: mobile-nav; width: 100%; padding: 13px 0 !important; display: grid; grid-template-columns: 27px minmax(0,1fr); gap: 9px; align-items: center; border: 0 !important; border-top: 1px solid var(--line) !important; font-size: clamp(19px,5vw,25px); font-weight: 700; line-height: 1.15; letter-spacing: -.035em; }
   .site-nav a:last-of-type { border-bottom: 1px solid var(--line) !important; }
   .site-nav > a:last-of-type { border-bottom: 0 !important; }
   .site-nav a::before { content: "0" counter(mobile-nav); color: var(--claret); font: 500 9px/1 var(--mono); letter-spacing: .04em; }
-  .site-nav a:not(.nav-resume)::after { content: "↘"; color: var(--muted); font: 400 17px/1 var(--mono); }
   .nav-resume-group { display: contents; }
   .nav-resume { border-radius: 0; background: transparent; color: inherit; }
   .nav-resume:hover { background: transparent; color: inherit; }
