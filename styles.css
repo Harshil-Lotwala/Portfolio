@@ -392,10 +392,11 @@ section[id] { scroll-margin-top: 82px; }
 
 @media (max-width: 860px) {
   :root { --gutter: clamp(20px,5vw,42px); }
-  .site-header { height: 72px; }
+  body { padding-top: calc(72px + env(safe-area-inset-top, 0px)); }
+  .site-header { position: fixed; inset: 0 0 auto; width: 100%; height: calc(72px + env(safe-area-inset-top, 0px)); padding-top: env(safe-area-inset-top, 0px); }
   .site-header > .wordmark { position: relative; z-index: 2; }
   .menu-toggle { display: block; position: relative; z-index: 2; }
-  .site-nav { counter-reset: mobile-nav; position: fixed; inset: 0; min-height: 100dvh; padding: 112px var(--gutter) 30px; flex-direction: column; align-items: stretch; justify-content: flex-start; gap: 0; overflow-y: auto; overscroll-behavior: contain; background: var(--surface); color: var(--ink); font-family: var(--display); clip-path: inset(0 0 0 100%); visibility: hidden; pointer-events: none; transition: clip-path .3s,visibility .3s; }
+  .site-nav { counter-reset: mobile-nav; position: fixed; inset: 0; min-height: 100dvh; padding: calc(112px + env(safe-area-inset-top, 0px)) var(--gutter) calc(30px + env(safe-area-inset-bottom, 0px)); flex-direction: column; align-items: stretch; justify-content: flex-start; gap: 0; overflow-y: auto; overscroll-behavior: contain; background: var(--surface); color: var(--ink); font-family: var(--display); clip-path: inset(0 0 0 100%); visibility: hidden; pointer-events: none; transition: clip-path .3s,visibility .3s; }
   .site-nav::before { content: "Navigation"; margin-bottom: 22px; color: var(--claret); font: 500 10px/1 var(--mono); letter-spacing: .12em; text-transform: uppercase; }
   .site-nav::after { content: "UX Designer · Full Stack Developer\A Halifax, NS · Open to opportunities"; margin-top: auto; padding-top: 22px; border-top: 1px solid var(--line); color: var(--muted); white-space: pre-line; font: 500 10px/1.8 var(--mono); letter-spacing: .06em; text-transform: uppercase; }
   .site-nav.open { clip-path: inset(0); visibility: visible; pointer-events: auto; }

@@ -1,6 +1,8 @@
+const initialHash = window.location.hash;
+
 // A previously used home link left #main in the URL, causing browsers to
 // restore the page below the beginning of the hero after a refresh.
-if (window.location.hash === '#main') {
+if (initialHash === '#main') {
   try {
     window.history.replaceState(null, '', window.location.href.replace(/#main$/, ''));
   } catch (_) {
@@ -16,6 +18,21 @@ const designWork = document.querySelector('.design-work');
   const project = document.getElementById(id);
   if (designWork && project) designWork.append(project);
 });
+
+// Re-apply saved project anchors after the cards reach their final order.
+// This prevents mobile browsers from restoring to the card's old position.
+if (initialHash && initialHash !== '#main') {
+  window.addEventListener('load', () => {
+    window.requestAnimationFrame(() => {
+      const target = document.getElementById(decodeURIComponent(initialHash.slice(1)));
+      if (!target) return;
+      const previousScrollBehavior = document.documentElement.style.scrollBehavior;
+      document.documentElement.style.scrollBehavior = 'auto';
+      target.scrollIntoView({ block: 'start', behavior: 'auto' });
+      document.documentElement.style.scrollBehavior = previousScrollBehavior;
+    });
+  }, { once: true });
+}
 
 const menuButton = document.querySelector('.menu-toggle');
 const nav = document.querySelector('.site-nav');
