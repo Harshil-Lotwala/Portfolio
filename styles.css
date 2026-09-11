@@ -164,6 +164,8 @@ section[id] { scroll-margin-top: 82px; }
 
 .demo-stage { min-height: 760px; padding: 30px 30px 38px; border: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; position: relative; overflow: hidden; background: transparent; }
 .device-showcase { min-width: 0; }
+.nab-portfolio-case .nab-portfolio-preview { width: 100%; min-width: 0; overflow: hidden; background: transparent; }
+.nab-portfolio-case .nab-portfolio-preview iframe { width: 100%; height: clamp(700px,58vw,820px); display: block; border: 0; background: transparent; }
 .device-switch { width: min(330px,100%); margin: 0 auto 14px; padding: 4px; display: grid; grid-template-columns: 1fr 1fr; gap: 4px; border: 1px solid var(--ink); border-radius: 99px; background: var(--surface); }
 .device-switch button { min-height: 40px; border: 0; border-radius: 99px; background: transparent; cursor: pointer; font: 500 10px/1 var(--mono); letter-spacing: .06em; text-transform: uppercase; }
 .device-switch button.active { background: var(--ink); color: white; }
@@ -461,6 +463,8 @@ section[id] { scroll-margin-top: 82px; }
   .experience-card dl div { grid-template-columns: 1fr; gap: 7px; }
   .skill-group { grid-template-columns: 35px 1fr; }
   .skill-group p { grid-column: 2; }
+  .nab-portfolio-case .nab-portfolio-preview { width: auto; margin-inline: calc(var(--gutter) * -1); border-inline: 0; border-radius: 0; }
+  .nab-portfolio-case .nab-portfolio-preview iframe { height: 720px; }
 }
 
 @media (max-width: 860px) {

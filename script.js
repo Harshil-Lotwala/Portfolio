@@ -9,6 +9,14 @@ if (window.location.hash === '#main') {
   window.requestAnimationFrame(() => window.scrollTo({ top: 0, left: 0, behavior: 'auto' }));
 }
 
+// Keep the UI/UX work in the intended portfolio sequence without changing
+// the structure or content of the existing project cards.
+const designWork = document.querySelector('.design-work');
+['north-atlantic-bank', 'freshlocal-market', 'dal-connect', 'housing-match'].forEach(id => {
+  const project = document.getElementById(id);
+  if (designWork && project) designWork.append(project);
+});
+
 const menuButton = document.querySelector('.menu-toggle');
 const nav = document.querySelector('.site-nav');
 

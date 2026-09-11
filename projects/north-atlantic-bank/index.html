@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="color-scheme" content="light dark">
+  <meta name="description" content="North Atlantic Bank — an interactive iPhone Duo banking concept.">
+  <title>North Atlantic Bank — iPhone Duo Prototype</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='20' fill='%230b2b62'/%3E%3Cpath d='M12 19h40M16 30h36M22 42h30' stroke='white' stroke-width='4' stroke-linecap='round' opacity='.96'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css?v=20260911-8">
+</head>
+<body>
+  <main class="nab-prototype" aria-label="North Atlantic Bank interactive prototype">
+    <header class="demo-toolbar" aria-label="Prototype controls">
+      <div class="demo-brand">
+        <span class="brand-mark brand-mark--small" aria-hidden="true"><i></i></span>
+        <span><strong>North Atlantic Bank</strong><small>Interactive Duo prototype</small></span>
+      </div>
+      <div class="demo-controls">
+        <div class="segmented" role="group" aria-label="Device state">
+          <button type="button" data-device="closed" aria-pressed="true">Closed</button>
+          <button type="button" data-device="open" aria-pressed="false">Open</button>
+          <button type="button" data-device="split" aria-pressed="false">Split</button>
+        </div>
+        <button class="demo-icon-button" type="button" id="rotate-demo" aria-label="Rotate device" title="Rotate device"></button>
+      </div>
+    </header>
+
+    <section class="device-stage" aria-live="polite">
+      <div class="device-wrap">
+        <div class="duo-device mode-closed" id="duo-device" data-testid="duo-device">
+          <div class="device-hardware" aria-hidden="true"><span></span><span></span><span></span></div>
+          <div class="device-screen">
+            <div id="app-root"></div>
+            <aside class="side-rail side-rail--left" data-pane="secondary" aria-label="Secondary display controls">
+              <button type="button" class="rail-button" data-action="back" aria-label="Back on left display">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m15.5 4.5-7.5 7.5 7.5 7.5"/></svg>
+              </button>
+              <nav class="rail-tabs" aria-label="Secondary display navigation">
+                <button type="button" data-route="home" aria-label="Home on secondary display">
+                  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m3.5 10.5 8.5-7 8.5 7v9.5H15v-6H9v6H3.5Z"/></svg>
+                </button>
+                <button type="button" data-route="payments" aria-label="Payments on secondary display">
+                  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 19V5M3.5 8.5 7 5l3.5 3.5M17 5v14m-3.5-3.5L17 19l3.5-3.5"/></svg>
+                </button>
+                <button type="button" data-route="more" aria-label="More on secondary display">
+                  <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="6" cy="12" r="1.35"/><circle cx="12" cy="12" r="1.35"/><circle cx="18" cy="12" r="1.35"/></svg>
+                </button>
+              </nav>
+            </aside>
+            <aside class="side-rail side-rail--right" data-pane="primary" aria-label="Primary display controls">
+              <div class="camera" aria-hidden="true"></div>
+              <time>9:41</time>
+              <div class="wifi" aria-label="Wi-Fi connected">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2.8 8.6a14.5 14.5 0 0 1 18.4 0M6.1 12.1a9.2 9.2 0 0 1 11.8 0M9.4 15.6a4 4 0 0 1 5.2 0"/><circle cx="12" cy="19.3" r="1.25"/></svg>
+              </div>
+              <button type="button" class="rail-button" data-action="back" aria-label="Back">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m15.5 4.5-7.5 7.5 7.5 7.5"/></svg>
+              </button>
+              <nav class="rail-tabs" aria-label="Quick navigation">
+                <button type="button" data-route="home" aria-label="Home">
+                  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m3.5 10.5 8.5-7 8.5 7v9.5H15v-6H9v6H3.5Z"/></svg>
+                </button>
+                <button type="button" data-route="payments" aria-label="Payments">
+                  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 19V5M3.5 8.5 7 5l3.5 3.5M17 5v14m-3.5-3.5L17 19l3.5-3.5"/></svg>
+                </button>
+                <button type="button" data-route="more" aria-label="More">
+                  <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="6" cy="12" r="1.35"/><circle cx="12" cy="12" r="1.35"/><circle cx="18" cy="12" r="1.35"/></svg>
+                </button>
+              </nav>
+            </aside>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <p class="demo-hint"><kbd>←</kbd> Back &nbsp; <kbd>R</kbd> Rotate &nbsp; <kbd>⌘/Ctrl</kbd> + <kbd>K</kbd> Search &nbsp; Device changes preserve your task</p>
+  </main>
+
+  <div id="live-region" class="sr-only" aria-live="polite"></div>
+  <script src="data.js"></script>
+  <script src="app.js?v=20260911-6"></script>
+</body>
+</html>
