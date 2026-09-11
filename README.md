@@ -10,6 +10,7 @@ The site combines UI/UX case studies, interactive prototypes, eight software pro
 
 - Responsive layouts for small phones, tablets, laptops, desktops, and ultra-wide displays
 - Full-screen mobile navigation with keyboard and orientation support
+- North Atlantic Bank high-fidelity prototype with Closed, Open, Split, and rotation-aware iPhone Duo layouts
 - Interactive front-end coursework prototypes for DAL Connect and FreshLocal, plus a detailed low-fidelity housing case study
 - Eight software projects with GitHub and live-demo links where available
 - A DAL Connect Apple Watch prototype with messaging, study-space booking, and simulated calendar persistence
@@ -23,7 +24,7 @@ The site combines UI/UX case studies, interactive prototypes, eight software pro
 ## Portfolio Sections
 
 1. **Introduction** — equal UX design and full stack development positioning
-2. **UI/UX Projects** — DAL Connect across phone and watch, FreshLocal, and Housing & Roommate Matching
+2. **UI/UX Projects** — North Atlantic Bank, FreshLocal, DAL Connect across phone and watch, and Housing & Roommate Matching
 3. **Development Projects** — AI Flashcard Generator, Degree Planner, FocusTrail, Job Marketplace, Vaibhavi’s Kitchen, Stock Dashboard, GPGC, and Cricket Perfect Run
 4. **About & Experience** — background and SCITCO freelance product design work
 5. **Skills** — UX, interface design, front-end, backend, databases, tools/workflow, and AI-assisted design and development
@@ -37,7 +38,7 @@ The site combines UI/UX case studies, interactive prototypes, eight software pro
 - Vanilla JavaScript
 - Google Fonts: Manrope and DM Mono
 - Formspree for contact-form delivery
-- Netlify for hosting
+- GitHub Pages for canonical hosting, with the legacy Netlify URL redirected to it
 
 ## Responsive Design
 
@@ -64,6 +65,8 @@ Content width is capped on very large screens so typography and project layouts 
 ├── dalhousie-logo.svg      Official Dalhousie logo used in Education
 ├── favicon.svg             Portfolio browser icon
 ├── netlify.toml            Redirects the legacy Netlify URL to GitHub Pages
+├── projects/
+│   └── north-atlantic-bank/ Self-contained interactive banking prototype
 └── README.md               Project documentation
 ```
 
@@ -84,6 +87,7 @@ Then open [http://localhost:8000](http://localhost:8000).
 - Personal details, project descriptions, and links: `index.html`
 - Colors, typography, spacing, and breakpoints: `styles.css`
 - Navigation, animations, marquee, and form handling: `script.js`
+- North Atlantic Bank prototype: `projects/north-atlantic-bank/`
 - Primary résumé: `Resume_Harshil.pdf`
 - Browser icon: `favicon.svg`
 
