@@ -54,10 +54,9 @@ section[id] { scroll-margin-top: 82px; }
 .site-nav a { text-decoration: none; }
 .site-nav a:not(.nav-resume) { border-bottom: 1px solid transparent; padding: 7px 0; }
 .site-nav a:not(.nav-resume):hover { border-color: currentColor; }
-.nav-resume-group { display: flex; align-items: stretch; overflow: hidden; border: 1px solid var(--ink); border-radius: 99px; }
-.nav-resume { padding: 12px 14px; white-space: nowrap; }
-.nav-resume + .nav-resume { border-left: 1px solid var(--ink); }
-.nav-resume:hover { background: var(--ink); color: var(--paper); }
+.nav-resume-group { display: flex; align-items: center; gap: 22px; }
+.nav-resume { padding: 7px 0; white-space: nowrap; border-bottom: 1px solid transparent; }
+.nav-resume:hover { border-color: currentColor; }
 .menu-toggle { display: none; width: 44px; height: 44px; padding: 10px; border: 0; background: none; }
 .menu-toggle > span:not(.sr-only) { display: block; height: 1.5px; margin: 6px 0; background: var(--ink); transition: .25s; }
 
@@ -388,7 +387,7 @@ section[id] { scroll-margin-top: 82px; }
 :focus-visible { outline: 3px solid var(--claret); outline-offset: 3px; }.watch-screen :focus-visible { outline-color: var(--sage); }
 
 @media (max-width: 1120px) {
-  .site-nav { gap: 14px; font-size: 10px; }.nav-resume { padding: 11px 10px; }.hero-bottom { padding-left: 17%; }.case-study { grid-template-columns: minmax(300px,.8fr) minmax(410px,1.1fr); gap: 50px; }.demo-stage { padding-inline: 20px; }.about-grid { margin-left: 15%; }.dev-grid { grid-template-columns: repeat(2,1fr); }
+  .site-nav { gap: 14px; font-size: 10px; }.nav-resume-group { gap: 12px; }.hero-bottom { padding-left: 17%; }.case-study { grid-template-columns: minmax(300px,.8fr) minmax(410px,1.1fr); gap: 50px; }.demo-stage { padding-inline: 20px; }.about-grid { margin-left: 15%; }.dev-grid { grid-template-columns: repeat(2,1fr); }
 }
 
 @media (max-width: 860px) {
@@ -406,7 +405,6 @@ section[id] { scroll-margin-top: 82px; }
   .site-nav a::before { content: "0" counter(mobile-nav); color: var(--claret); font: 500 9px/1 var(--mono); letter-spacing: .04em; }
   .site-nav a:not(.nav-resume)::after { content: "↘"; color: var(--muted); font: 400 17px/1 var(--mono); }
   .nav-resume-group { display: contents; }
-  .nav-resume + .nav-resume { border-left: 0; }
   .nav-resume { border-radius: 0; background: transparent; color: inherit; }
   .nav-resume:hover { background: transparent; color: inherit; }
   .menu-toggle.active span:first-child { transform: translateY(7.5px) rotate(45deg); }
