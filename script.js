@@ -335,7 +335,12 @@ if (market) {
     market.querySelector('[data-market-confirm-copy]').textContent = fulfilment === 'delivery' ? `Delivery scheduled for ${time}.` : `Pickup scheduled for ${time} at Downtown Farmers Market.`;
     showMarket('confirmation');
   });
-  market.querySelector('[data-market-favourite]')?.addEventListener('click', event => { event.currentTarget.textContent = event.currentTarget.textContent === '♡' ? '♥' : '♡'; flash(toast, 'Saved products updated'); });
+  market.querySelector('[data-market-favourite]')?.addEventListener('click', event => {
+    const selected = event.currentTarget.getAttribute('aria-pressed') === 'true';
+    event.currentTarget.setAttribute('aria-pressed', String(!selected));
+    event.currentTarget.setAttribute('aria-label', selected ? 'Save product' : 'Remove saved product');
+    flash(toast, selected ? 'Product removed from saved items' : 'Product saved');
+  });
   market.querySelector('[data-market-read]')?.addEventListener('click', event => {
     market.querySelectorAll('.fresh-alert').forEach(alert => alert.classList.remove('unread'));
     event.currentTarget.textContent = 'All read';
