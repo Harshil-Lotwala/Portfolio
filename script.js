@@ -1,8 +1,6 @@
-const initialHash = window.location.hash;
-
 // A previously used home link left #main in the URL, causing browsers to
 // restore the page below the beginning of the hero after a refresh.
-if (initialHash === '#main') {
+if (window.location.hash === '#main') {
   try {
     window.history.replaceState(null, '', window.location.href.replace(/#main$/, ''));
   } catch (_) {
@@ -11,27 +9,17 @@ if (initialHash === '#main') {
   window.requestAnimationFrame(() => window.scrollTo({ top: 0, left: 0, behavior: 'auto' }));
 }
 
-// Keep the UI/UX work in the intended portfolio sequence without changing
-// the structure or content of the existing project cards.
+// Put the UI/UX cards in their published order before starting the embedded
+// bank prototype. Moving an already-loaded iframe is unreliable in Safari.
 const designWork = document.querySelector('.design-work');
 ['north-atlantic-bank', 'freshlocal-market', 'dal-connect', 'housing-match'].forEach(id => {
   const project = document.getElementById(id);
   if (designWork && project) designWork.append(project);
 });
-
-// Re-apply saved project anchors after the cards reach their final order.
-// This prevents mobile browsers from restoring to the card's old position.
-if (initialHash && initialHash !== '#main') {
-  window.addEventListener('load', () => {
-    window.requestAnimationFrame(() => {
-      const target = document.getElementById(decodeURIComponent(initialHash.slice(1)));
-      if (!target) return;
-      const previousScrollBehavior = document.documentElement.style.scrollBehavior;
-      document.documentElement.style.scrollBehavior = 'auto';
-      target.scrollIntoView({ block: 'start', behavior: 'auto' });
-      document.documentElement.style.scrollBehavior = previousScrollBehavior;
-    });
-  }, { once: true });
+const bankPrototypeFrame = document.querySelector('.nab-portfolio-preview iframe[data-src]');
+if (bankPrototypeFrame) {
+  bankPrototypeFrame.src = bankPrototypeFrame.dataset.src;
+  bankPrototypeFrame.removeAttribute('data-src');
 }
 
 const menuButton = document.querySelector('.menu-toggle');

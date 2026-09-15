@@ -480,6 +480,7 @@ kbd { font:inherit;border:1px solid var(--border);border-bottom-width:2px;backgr
 @media (prefers-reduced-motion: reduce) { *,*::before,*::after{scroll-behavior:auto!important;animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important;} }
 @media (max-width: 680px) {
   .nab-prototype { padding-inline:8px;grid-template-rows:54px 1fr 18px; }
+  .device-stage { place-items:start center; }
   .demo-brand small { display:none; }
   .demo-brand strong { font-size:12px; }
   .demo-brand .brand-mark { --brand-mark-size:30px; }
