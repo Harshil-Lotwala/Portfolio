@@ -4,7 +4,7 @@
 
 A responsive, editorial-style portfolio for Harshil Lotwala, presented equally as a UX designer and full stack developer studying Applied Computer Science at Dalhousie University.
 
-The site combines UI/UX case studies, interactive prototypes, eight software projects, professional freelance work, technical skills, education, and contact information in a single accessible page.
+The site combines UI/UX case studies, interactive prototypes, four featured software projects, professional freelance work, technical skills, education, and contact information in a single accessible page.
 
 ## Highlights
 
@@ -12,7 +12,7 @@ The site combines UI/UX case studies, interactive prototypes, eight software pro
 - Full-screen mobile navigation with keyboard and orientation support
 - North Atlantic Bank high-fidelity prototype with Closed, Open, Split, and rotation-aware iPhone Duo layouts
 - Interactive front-end coursework prototypes for DAL Connect and FreshLocal, plus a detailed low-fidelity housing case study
-- Eight software projects with GitHub and live-demo links where available
+- Four featured software projects with GitHub and live-demo links where available
 - A DAL Connect Apple Watch prototype with messaging, study-space booking, and simulated calendar persistence
 - Scroll-triggered content reveals using `IntersectionObserver`
 - Clear 50/50 design-and-development positioning
@@ -25,7 +25,7 @@ The site combines UI/UX case studies, interactive prototypes, eight software pro
 
 1. **Introduction** — equal UX design and full stack development positioning
 2. **UI/UX Projects** — North Atlantic Bank, FreshLocal, DAL Connect across phone and watch, and Housing & Roommate Matching
-3. **Development Projects** — AI Flashcard Generator, Degree Planner, FocusTrail, Job Marketplace, Vaibhavi’s Kitchen, Stock Dashboard, GPGC, and Cricket Perfect Run
+3. **Development Projects** — AI Flashcard Generator, Degree Planner, FocusTrail, and Vaibhavi’s Kitchen
 4. **About & Experience** — background and SCITCO freelance product design work
 5. **Skills** — UX, interface design, front-end, backend, databases, tools/workflow, and AI-assisted design and development
 6. **Education** — Bachelor of Applied Computer Science at Dalhousie University
