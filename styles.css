@@ -385,7 +385,11 @@ section[id] { scroll-margin-top: 82px; }
 .contact { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(70px,11vw,170px); background: var(--rose); color: var(--ink); border-top: 1px solid var(--line); }.contact-copy h2 { max-width: 800px; }.contact-copy > p:not(.eyebrow) { max-width: 540px; margin: 35px 0; color: var(--muted); font-size: 18px; }.email-link { font: 500 clamp(14px,1.5vw,20px)/1.4 var(--mono); text-underline-offset: 8px; }.contact-form { display: flex; flex-direction: column; gap: 24px; }.contact-form label { display: flex; flex-direction: column; gap: 7px; font: 500 10px/1 var(--mono); text-transform: uppercase; letter-spacing: .08em; }.contact-form input,.contact-form textarea { padding: 12px 0; border: 0; border-bottom: 1px solid rgba(32,42,42,.36); border-radius: 0; outline: none; background: transparent; color: var(--ink); resize: vertical; font: 400 17px/1.5 var(--display); text-transform: none; letter-spacing: 0; }.contact-form input::placeholder,.contact-form textarea::placeholder { color: rgba(32,42,42,.5); }.contact-form input:focus,.contact-form textarea:focus { border-color: var(--claret); }.contact-form .button { align-self: flex-start; min-width: 210px; }.form-status { min-height: 20px; margin: 0; color: var(--claret); font: 400 11px/1.4 var(--mono); }
 .site-footer { padding: 45px var(--gutter); display: grid; grid-template-columns: 1fr auto; gap: 25px; background: var(--rose); color: var(--ink); border-top: 1px solid var(--line); font: 400 10px/1.4 var(--mono); }.site-footer > div p { margin: 12px 0 0; color: var(--muted); }.site-footer nav { display: flex; gap: 24px; }.site-footer > p { grid-column: 1/-1; color: var(--muted); }
 
-.reveal { opacity: 0; transform: translateY(24px); transition: opacity .7s ease,transform .7s cubic-bezier(.2,.7,.2,1); }.reveal.visible { opacity: 1; transform: none; }
+.reveal { opacity: 0; transform: translateY(24px); transition: opacity .7s ease,transform .7s cubic-bezier(.2,.7,.2,1); }
+.reveal.visible { opacity: 1; transform: none; }
+.anime-motion .reveal { transition: none; }
+.anime-motion .motion-target { will-change: transform,opacity; }
+.anime-motion .motion-complete { will-change: auto; }
 [hidden] { display: none !important; }
 :focus-visible { outline: 3px solid var(--claret); outline-offset: 3px; }.watch-screen :focus-visible { outline-color: var(--sage); }
 

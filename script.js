@@ -24,6 +24,42 @@ if (bankPrototypeFrame) {
 
 const menuButton = document.querySelector('.menu-toggle');
 const nav = document.querySelector('.site-nav');
+const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+const animeMotion = window.anime;
+const animate = animeMotion?.animate;
+const stagger = animeMotion?.stagger;
+
+if (animate && !prefersReducedMotion.matches) {
+  document.documentElement.classList.add('anime-motion');
+}
+
+function finishMotion(elements) {
+  elements.forEach(element => {
+    element.classList.add('motion-complete');
+    element.style.removeProperty('opacity');
+    element.style.removeProperty('transform');
+    element.style.removeProperty('translate');
+    element.style.removeProperty('rotate');
+    element.style.removeProperty('scale');
+  });
+}
+
+function animateTargets(targets, parameters) {
+  const elements = [...targets].filter(Boolean);
+  if (!elements.length || !animate || prefersReducedMotion.matches) {
+    finishMotion(elements);
+    return null;
+  }
+
+  elements.forEach(element => element.classList.add('motion-target'));
+  return animate(elements, {
+    ...parameters,
+    onComplete: () => {
+      finishMotion(elements);
+      parameters.onComplete?.();
+    }
+  });
+}
 
 function closeMenu() {
   nav?.classList.remove('open');
@@ -37,21 +73,109 @@ menuButton?.addEventListener('click', () => {
   menuButton.classList.toggle('active', open);
   menuButton.setAttribute('aria-expanded', String(open));
   document.body.style.overflow = open ? 'hidden' : '';
+  if (open) {
+    animateTargets(nav.querySelectorAll('a'), {
+      opacity: { from: 0 },
+      x: { from: 22 },
+      delay: stagger ? stagger(45, { start: 80 }) : 0,
+      duration: 520,
+      ease: 'outCubic'
+    });
+  }
 });
 
 nav?.querySelectorAll('a').forEach(link => link.addEventListener('click', closeMenu));
 document.addEventListener('keydown', event => { if (event.key === 'Escape') closeMenu(); });
 window.matchMedia('(max-width: 860px)').addEventListener('change', event => { if (!event.matches) closeMenu(); });
 
+function revealElement(element) {
+  element.classList.add('visible');
+
+  if (!animate || prefersReducedMotion.matches) return;
+
+  if (element.classList.contains('case-study')) {
+    const copy = element.querySelectorAll('.case-copy > *');
+    const visual = element.querySelector('.device-showcase, .demo-stage, .nab-portfolio-preview');
+    animateTargets(copy, {
+      opacity: { from: 0 },
+      y: { from: 22 },
+      delay: stagger ? stagger(65) : 0,
+      duration: 650,
+      ease: 'outCubic'
+    });
+    animateTargets([visual], {
+      opacity: { from: 0 },
+      x: { from: window.innerWidth <= 620 ? 0 : 28 },
+      y: { from: window.innerWidth <= 620 ? 18 : 0 },
+      scale: { from: .985 },
+      duration: 820,
+      ease: 'outCubic'
+    });
+    return;
+  }
+
+  if (element.classList.contains('project')) {
+    const copy = element.querySelectorAll('.project-index, .project-type, .project-copy h3, .project-copy > p:not(.project-type), .tags, .inline-links');
+    const shape = element.querySelector('.project-shape');
+    animateTargets(copy, {
+      opacity: { from: 0 },
+      y: { from: 20 },
+      delay: stagger ? stagger(55) : 0,
+      duration: 620,
+      ease: 'outCubic'
+    });
+    animateTargets([shape], {
+      opacity: { from: 0 },
+      x: { from: window.innerWidth <= 620 ? 0 : 24 },
+      y: { from: window.innerWidth <= 620 ? 18 : 0 },
+      scale: { from: .96 },
+      duration: 760,
+      ease: 'outCubic'
+    });
+    return;
+  }
+
+  if (element.classList.contains('skill-group')) {
+    animateTargets(element.children, {
+      opacity: { from: 0 },
+      x: { from: 16 },
+      delay: stagger ? stagger(65) : 0,
+      duration: 560,
+      ease: 'outCubic'
+    });
+    return;
+  }
+
+  animateTargets([element], {
+    opacity: { from: 0 },
+    y: { from: 24 },
+    duration: 720,
+    ease: 'outCubic'
+  });
+}
+
 const observer = new IntersectionObserver(entries => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
-      entry.target.classList.add('visible');
+      revealElement(entry.target);
       observer.unobserve(entry.target);
     }
   });
-}, { threshold: 0.01, rootMargin: '0px 0px -20px' });
-document.querySelectorAll('.reveal').forEach(element => observer.observe(element));
+}, { threshold: 0.08, rootMargin: '0px 0px -7% 0px' });
+
+const heroReveals = [...document.querySelectorAll('.hero .reveal')];
+heroReveals.forEach(element => element.classList.add('visible'));
+animateTargets(heroReveals, {
+  opacity: { from: 0 },
+  y: { from: 24 },
+  delay: stagger ? stagger(105, { start: 70 }) : 0,
+  duration: 820,
+  ease: 'outCubic'
+});
+
+document.querySelectorAll('.reveal').forEach(element => {
+  if (!element.closest('.hero')) observer.observe(element);
+});
 document.getElementById('year').textContent = new Date().getFullYear();
 
 function activate(container, panelSelector, name) {
@@ -79,10 +203,29 @@ document.querySelectorAll('[data-device-switch]').forEach(button => {
       control.setAttribute('aria-pressed', String(active));
     });
     showcase.querySelectorAll('[data-device-view]').forEach(view => {
-      view.classList.toggle('is-active', view.dataset.deviceView === selected);
+      const active = view.dataset.deviceView === selected;
+      view.classList.toggle('is-active', active);
+      if (active) {
+        animateTargets([view], {
+          opacity: { from: 0 },
+          y: { from: 12 },
+          scale: { from: .99 },
+          duration: 480,
+          ease: 'outCubic'
+        });
+      }
     });
   });
 });
+
+if (window.matchMedia('(hover: hover) and (pointer: fine)').matches) {
+  document.querySelectorAll('.button').forEach(button => {
+    const icon = button.querySelector('span');
+    if (!icon) return;
+    button.addEventListener('pointerenter', () => animateTargets([icon], { x: 4, duration: 240, ease: 'outCubic' }));
+    button.addEventListener('pointerleave', () => animateTargets([icon], { x: 0, duration: 240, ease: 'outCubic' }));
+  });
+}
 
 // DAL Connect: confirmation, post, reminder, and schedule states.
 const dal = document.querySelector('[data-demo="dal"]');

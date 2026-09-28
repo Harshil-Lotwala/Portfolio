@@ -14,7 +14,7 @@ The site combines UI/UX case studies, interactive prototypes, four featured soft
 - Interactive front-end coursework prototypes for DAL Connect and FreshLocal, plus a detailed low-fidelity housing case study
 - Four featured software projects with GitHub and live-demo links where available
 - A DAL Connect Apple Watch prototype with messaging, study-space booking, and simulated calendar persistence
-- Scroll-triggered content reveals using `IntersectionObserver`
+- Anime.js-powered hero, section, project, menu, and interaction motion with `IntersectionObserver` triggering
 - Clear 50/50 design-and-development positioning
 - Accessible focus states, semantic landmarks, reduced-motion support, and a skip link
 - Formspree contact form with inline success and error feedback
@@ -60,7 +60,7 @@ Content width is capped on very large screens so typography and project layouts 
 .
 ├── index.html              Main portfolio content
 ├── styles.css              Visual system and responsive layouts
-├── script.js               Navigation, reveals, marquee, and form behavior
+├── script.js               Navigation, Anime.js motion, prototypes, and form behavior
 ├── Resume_Harshil_UIUX.pdf UI/UX and product design résumé
 ├── Resume_Harshil_Development.pdf
 │                           Software development résumé
@@ -88,7 +88,7 @@ Then open [http://localhost:8000](http://localhost:8000).
 
 - Personal details, project descriptions, and links: `index.html`
 - Colors, typography, spacing, and breakpoints: `styles.css`
-- Navigation, animations, marquee, and form handling: `script.js`
+- Navigation, Anime.js animations, marquee, and form handling: `script.js`
 - North Atlantic Bank prototype: `projects/north-atlantic-bank/`
 - UI/UX résumé: `Resume_Harshil_UIUX.pdf`
 - Development résumé: `Resume_Harshil_Development.pdf`
