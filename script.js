@@ -61,6 +61,23 @@ function animateTargets(targets, parameters) {
   });
 }
 
+const scrollProgress = document.querySelector('.scroll-progress span');
+let progressFrame = 0;
+
+function updateScrollProgress() {
+  progressFrame = 0;
+  if (!scrollProgress) return;
+  const available = document.documentElement.scrollHeight - window.innerHeight;
+  const progress = available > 0 ? Math.min(1, Math.max(0, window.scrollY / available)) : 0;
+  scrollProgress.style.transform = `scaleX(${progress})`;
+}
+
+window.addEventListener('scroll', () => {
+  if (!progressFrame) progressFrame = window.requestAnimationFrame(updateScrollProgress);
+}, { passive: true });
+window.addEventListener('resize', updateScrollProgress);
+updateScrollProgress();
+
 function closeMenu() {
   nav?.classList.remove('open');
   menuButton?.classList.remove('active');
@@ -146,6 +163,17 @@ function revealElement(element) {
     return;
   }
 
+  if (element.classList.contains('section-heading')) {
+    animateTargets(element.children, {
+      opacity: { from: 0 },
+      y: { from: 28 },
+      delay: stagger ? stagger(130) : 0,
+      duration: 760,
+      ease: 'outCubic'
+    });
+    return;
+  }
+
   animateTargets([element], {
     opacity: { from: 0 },
     y: { from: 24 },
@@ -165,12 +193,29 @@ const observer = new IntersectionObserver(entries => {
 
 const heroReveals = [...document.querySelectorAll('.hero .reveal')];
 heroReveals.forEach(element => element.classList.add('visible'));
-animateTargets(heroReveals, {
+const heroSequence = document.querySelectorAll('.hero-kicker-row > *, .hero-title-line, .hero h1 em, .hero-lead, .hero-actions > *');
+animateTargets(heroSequence, {
   opacity: { from: 0 },
-  y: { from: 24 },
-  delay: stagger ? stagger(105, { start: 70 }) : 0,
-  duration: 820,
+  y: { from: 42 },
+  delay: stagger ? stagger(115, { start: 120 }) : 0,
+  duration: 980,
+  ease: 'outExpo'
+});
+
+animateTargets(document.querySelectorAll('.site-header .wordmark, .site-nav > a, .nav-resume-group'), {
+  opacity: { from: 0 },
+  y: { from: -12 },
+  delay: stagger ? stagger(55, { start: 50 }) : 0,
+  duration: 620,
   ease: 'outCubic'
+});
+
+animateTargets(document.querySelectorAll('.hero-marquee'), {
+  opacity: { from: 0 },
+  scaleX: { from: .92 },
+  duration: 900,
+  delay: 620,
+  ease: 'outExpo'
 });
 
 document.querySelectorAll('.reveal').forEach(element => {

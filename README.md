@@ -14,7 +14,7 @@ The site combines UI/UX case studies, interactive prototypes, four featured soft
 - Interactive front-end coursework prototypes for DAL Connect and FreshLocal, plus a detailed low-fidelity housing case study
 - Four featured software projects with GitHub and live-demo links where available
 - A DAL Connect Apple Watch prototype with messaging, study-space booking, and simulated calendar persistence
-- Anime.js-powered hero, section, project, menu, and interaction motion with `IntersectionObserver` triggering
+- Anime.js-powered hero, section, project, menu, and interaction motion with `IntersectionObserver` triggering and a persistent scroll-progress indicator
 - Clear 50/50 design-and-development positioning
 - Accessible focus states, semantic landmarks, reduced-motion support, and a skip link
 - Formspree contact form with inline success and error feedback
