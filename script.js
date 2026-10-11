@@ -7,8 +7,22 @@ const designWork = document.querySelector('.design-work');
 });
 const bankPrototypeFrame = document.querySelector('.nab-portfolio-preview iframe[data-src]');
 if (bankPrototypeFrame) {
-  bankPrototypeFrame.src = bankPrototypeFrame.dataset.src;
-  bankPrototypeFrame.removeAttribute('data-src');
+  const loadBankPrototype = () => {
+    bankPrototypeFrame.src = bankPrototypeFrame.dataset.src;
+    bankPrototypeFrame.removeAttribute('data-src');
+  };
+  // Do not create offscreen login fields on arrival: Safari's password
+  // autofill can focus them and scroll the entire portfolio to this iframe.
+  if ('IntersectionObserver' in window) {
+    const bankObserver = new IntersectionObserver(entries => {
+      if (!entries.some(entry => entry.isIntersecting)) return;
+      bankObserver.disconnect();
+      loadBankPrototype();
+    });
+    bankObserver.observe(bankPrototypeFrame);
+  } else {
+    loadBankPrototype();
+  }
 }
 
 const menuButton = document.querySelector('.menu-toggle');
