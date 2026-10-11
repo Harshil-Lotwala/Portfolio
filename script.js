@@ -1,14 +1,3 @@
-// A previously used home link left #main in the URL, causing browsers to
-// restore the page below the beginning of the hero after a refresh.
-if (window.location.hash === '#main') {
-  try {
-    window.history.replaceState(null, '', window.location.href.replace(/#main$/, ''));
-  } catch (_) {
-    // Scrolling still restores the intended start position if history is unavailable.
-  }
-  window.requestAnimationFrame(() => window.scrollTo({ top: 0, left: 0, behavior: 'auto' }));
-}
-
 // Put the UI/UX cards in their published order before starting the embedded
 // bank prototype. Moving an already-loaded iframe is unreliable in Safari.
 const designWork = document.querySelector('.design-work');
